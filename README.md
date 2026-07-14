@@ -8,8 +8,8 @@ This repository contains my study notes, network diagrams, Packet Tracer labs, c
 
 **Status:** In progress  
 **Current topic:** VLANs  
-**Started:** Tuesday 14th, 2026  
-**Target exam date:** September 6th, 2026
+**Started:** Tuesday July 14th, 2026  
+**Target exam date:** Tuesday July 14th, 2026
 
 - [ ] Network fundamentals
 - [ ] Network access
