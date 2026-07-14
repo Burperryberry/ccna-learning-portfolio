@@ -7,9 +7,9 @@ This repository contains my study notes, network diagrams, Packet Tracer labs, c
 ## Current Progress
 
 **Status:** In progress  
-**Current topic:** Replace with your current topic  
-**Started:** Replace with your start date  
-**Target exam date:** Replace with your target date
+**Current topic:** VLANs  
+**Started:** Tuesday 14th, 2026  
+**Target exam date:** September 6th, 2026
 
 - [ ] Network fundamentals
 - [ ] Network access
