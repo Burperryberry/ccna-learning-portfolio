@@ -55,7 +55,7 @@ ccna-learning-portfolio/
 
 - Cisco Packet Tracer
 - Cisco IOS CLI
-- Wireshark
+- Anki Flashcards
 - Git and GitHub
 - Subnetting practice tools
 
