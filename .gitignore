@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+state.json
+.obsidian/
+.anki-sync/
+.packet-tracer-sync/

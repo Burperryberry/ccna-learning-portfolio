@@ -103,7 +103,7 @@ interface gigabitEthernet1/0
  switchport access vlan 10
 ```
 
-The port sends and receives ordinary untagged frames for its assigned VLAN. Ports that carry multiple VLANs are called trunk ports; those are covered in [[VLANs Part 2 - Trunks, 802.1Q, and ROAS]].
+The port sends and receives ordinary untagged frames for its assigned VLAN. Ports that carry multiple VLANs are called trunk ports; those are covered in [VLANs Part 2 — Trunks, 802.1Q, and ROAS](<VLANs Part 2 - Trunks, 802.1Q, and ROAS.md>).
 
 ## Configuring VLANs on Cisco switches
 
