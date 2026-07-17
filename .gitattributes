@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Cisco Packet Tracer project files are binary.
+*.pkt binary

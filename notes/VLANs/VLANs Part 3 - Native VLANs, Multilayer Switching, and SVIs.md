@@ -17,7 +17,7 @@ source: "Day 18 Slides - VLANs (Part 3)"
 
 ## Big picture
 
-This lesson extends [[VLANs Part 2 - Trunks, 802.1Q, and ROAS]] in two directions:
+This lesson extends [VLANs Part 2 — Trunks, 802.1Q, and ROAS](<VLANs Part 2 - Trunks, 802.1Q, and ROAS.md>) in two directions:
 
 1. It explains how a router handles the untagged **native VLAN** in a Router-on-a-Stick design.
 2. It replaces Router-on-a-Stick with a **multilayer switch**, which performs inter-VLAN routing through Switch Virtual Interfaces (SVIs).
