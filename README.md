@@ -7,7 +7,7 @@ This repository contains my study notes, network diagrams, Packet Tracer labs, c
 ## Current Progress
 
 **Status:** In progress  
-**Current topic:** VLANs  
+**Current topic:** STP
 **Started:** Tuesday July 14th, 2026  
 **Target exam date:** Tuesday July 14th, 2026
 
@@ -18,6 +18,19 @@ This repository contains my study notes, network diagrams, Packet Tracer labs, c
 - [ ] Security fundamentals
 - [ ] Automation and programmability
 - [ ] Practice exams and review
+
+
+<!-- OBSIDIAN_SYNC:START -->
+## Recent Activity
+
+- [Packet Tracer Dashboard](progress/packet-tracer.md)
+- [Lab Status](progress/lab-status.md)
+- [Anki Progress Dashboard](progress/anki.md)
+- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](notes/STP/STP%20Part%201%20-%20Redundancy%2C%20Root%20Bridge%2C%20and%20Port%20Roles.md)
+- [DTP & VTP - Slide Summary](notes/DTP%20%26%20VTP/DTP%20%26%20VTP%20-%20Slide%20Summary.md)
+
+See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).
+<!-- OBSIDIAN_SYNC:END -->
 
 ## Labs and Projects
 
