@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import posixpath
 import re
 import sys
 from datetime import datetime
@@ -48,7 +49,7 @@ def opted_out(text: str) -> bool:
     return bool(re.search(r"(?mi)^publish\s*:\s*(?:false|no|off)\s*$", frontmatter))
 
 
-def github_friendly(text: str) -> str:
+def github_friendly(text: str, link_renderer=None) -> str:
     """Replace Obsidian-only links with readable labels without exposing local paths."""
 
     def replace_embed(match: re.Match[str]) -> str:
@@ -58,11 +59,44 @@ def github_friendly(text: str) -> str:
 
     def replace_link(match: re.Match[str]) -> str:
         target = match.group(1).replace("\\|", "|")
+        if link_renderer is not None:
+            return link_renderer(target)
         return target.split("|", 1)[-1]
 
     text = re.sub(r"!\[\[([^\]]+)\]\]", replace_embed, text)
     text = re.sub(r"\[\[([^\]]+)\]\]", replace_link, text)
     return text.rstrip() + "\n"
+
+
+def notes_friendly(relative_source: Path, text: str) -> str:
+    """Convert Obsidian note links into relative GitHub Markdown links."""
+
+    def render_link(raw_target: str) -> str:
+        target, separator, alias = raw_target.partition("|")
+        path_text, heading_separator, heading = target.partition("#")
+        default_label = Path(path_text).name
+        if default_label.lower().endswith(".md"):
+            default_label = default_label[:-3]
+        label = alias if separator else (default_label or heading or target)
+        label = label.replace("]", "\\]")
+
+        if path_text:
+            target_path = Path(path_text)
+            if not path_text.lower().endswith(".md"):
+                target_path = Path(f"{path_text}.md")
+            if "/" not in path_text:
+                target_path = relative_source.parent / target_path
+            start = relative_source.parent.as_posix() or "."
+            href = posixpath.relpath(target_path.as_posix(), start)
+        else:
+            href = ""
+
+        if heading_separator:
+            anchor = re.sub(r"[^a-z0-9 -]", "", heading.lower()).strip().replace(" ", "-")
+            href = f"{href}#{anchor}"
+        return f"[{label}](<{href}>)"
+
+    return github_friendly(text, render_link)
 
 
 def progress_friendly(relative_source: Path, text: str) -> str:
@@ -124,7 +158,8 @@ def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
     content_items = [item for item in ordered if item[1].parts[0] == "notes"]
     if content_items:
         current_topic = content_items[0][0].parent.name
-        readme = re.sub(r"(?m)^\*\*Current topic:\*\*.*$", f"**Current topic:** {current_topic}", readme)
+        topic_pattern = re.compile(r"(?m)^(?P<prefix>\s*(?:-\s*)?\*\*Current topic:\*\*)[^\n]*$")
+        readme = topic_pattern.sub(lambda match: f"{match.group('prefix')} {current_topic}", readme)
 
     recent_lines = []
     for source, destination in ordered[:5]:
@@ -147,9 +182,9 @@ def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
         pattern = re.compile(re.escape(README_START) + r".*?" + re.escape(README_END), re.DOTALL)
         return pattern.sub(block, readme)
 
-    anchor = "\n## Labs and Projects"
-    if anchor in readme:
-        return readme.replace(anchor, f"\n{block}\n{anchor}", 1)
+    for anchor in ("\n## Portfolio sections", "\n## Labs and Projects"):
+        if anchor in readme:
+            return readme.replace(anchor, f"\n{block}\n{anchor}", 1)
     return readme.rstrip() + f"\n\n{block}\n"
 
 
@@ -162,7 +197,7 @@ def build_outputs(vault: Path, repo: Path) -> tuple[dict[Path, str], list[tuple[
         if opted_out(text):
             continue
         destination = Path("notes") / source.relative_to(vault)
-        outputs[destination] = github_friendly(text)
+        outputs[destination] = notes_friendly(source.relative_to(vault), text)
         activity_items.append((source, destination))
 
     for relative_source, destination in PROGRESS_SOURCES.items():

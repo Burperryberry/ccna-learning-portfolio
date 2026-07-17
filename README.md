@@ -1,24 +1,14 @@
 # CCNA Learning Portfolio
 
-A hands-on portfolio documenting my progress toward the **Cisco Certified Network Associate (CCNA)** certification.
+A hands-on record of my progress toward the **Cisco Certified Network Associate (CCNA)** certification.
 
-This repository contains my study notes, network diagrams, Packet Tracer labs, configurations, troubleshooting exercises, and lessons learned.
+## Current snapshot
 
-## Current Progress
-
-**Status:** In progress  
-**Current topic:** STP
-**Started:** Tuesday July 14th, 2026  
-**Target exam date:** Tuesday July 14th, 2026
-
-- [ ] Network fundamentals
-- [ ] Network access
-- [ ] IP connectivity
-- [ ] IP services
-- [ ] Security fundamentals
-- [ ] Automation and programmability
-- [ ] Practice exams and review
-
+- **Status:** In progress
+- **Current topic:** STP
+- **Packet Tracer labs:** 10 of 12 marked complete
+- **Study system:** Cisco Packet Tracer, Obsidian, and Anki
+- **Snapshot date:** July 16, 2026
 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
@@ -32,67 +22,40 @@ This repository contains my study notes, network diagrams, Packet Tracer labs, c
 See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).
 <!-- OBSIDIAN_SYNC:END -->
 
-## Labs and Projects
+## Portfolio sections
 
-| Lab | Topics Practiced | Status |
-|---|---|---|
-| Basic LAN Configuration | Switches, addressing, connectivity | Planned |
-| VLANs and Trunking | VLANs, 802.1Q, inter-VLAN routing | Planned |
-| Static and Default Routes | IPv4 routing | Planned |
-| OSPF Single-Area Network | Dynamic routing, OSPF | Planned |
-| Access Control Lists | Standard and extended ACLs | Planned |
-| DHCP and NAT | IP services | Planned |
+| Folder | Contents |
+|---|---|
+| [`labs/`](labs/) | Packet Tracer `.pkt` files and the lab completion snapshot |
+| [`notes/`](notes/) | Topic notes covering VLANs, trunks, SVIs, DTP, and VTP |
+| [`flashcard-progress/`](flashcard-progress/) | Anki workload, review activity, retention, and weak-topic dashboard |
 
-Each completed lab should include:
-
-- The objective
-- A network diagram
-- Addressing information
-- Device configurations
-- Verification commands
-- Problems encountered and lessons learned
-
-## Repository Structure
+## Repository structure
 
 ```text
 ccna-learning-portfolio/
-├── notes/
 ├── labs/
-├── configurations/
-├── diagrams/
-├── troubleshooting/
-└── resources/
+├── notes/
+└── flashcard-progress/
 ```
+
+## Skills in development
+
+- Cisco IOS CLI configuration and verification
+- IPv4 addressing and subnetting
+- Static routing and packet-flow troubleshooting
+- VLANs, 802.1Q trunks, router-on-a-stick, and SVIs
+- Dynamic Trunking Protocol and VLAN Trunking Protocol
+- Spaced-repetition review with Anki
 
 ## Tools
 
 - Cisco Packet Tracer
 - Cisco IOS CLI
-- Anki Flashcards
+- Obsidian
+- Anki
 - Git and GitHub
-- Subnetting practice tools
-
-## Skills I Am Developing
-
-- IPv4 and IPv6 addressing
-- Subnetting
-- VLAN and trunk configuration
-- Static and dynamic routing
-- OSPF
-- DHCP, DNS and NAT
-- Access control lists
-- Network security fundamentals
-- Troubleshooting with Cisco IOS commands
-- Basic network automation concepts
-
-## Next Steps
-
-1. Complete the current study topic.
-2. Build and document a related Packet Tracer lab.
-3. Add configuration files and verification results.
-4. Review weak areas with practice questions.
-5. Update this README as progress is made.
 
 ## Disclaimer
 
-This is a personal learning portfolio. Cisco, Cisco IOS, Packet Tracer and CCNA are trademarks or registered trademarks of Cisco Systems, Inc.
+This is a personal learning portfolio. Cisco, Cisco IOS, Packet Tracer, and CCNA are trademarks or registered trademarks of Cisco Systems, Inc.

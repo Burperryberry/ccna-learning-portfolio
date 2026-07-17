@@ -271,6 +271,6 @@ Use the output to verify:
 
 ## Related notes
 
-- VLANs Part 1 - LANs, Broadcast Domains, and Access Ports
-- VLANs Part 2 - Trunks, 802.1Q, and ROAS
-- DTP & VTP - Slide Summary
+- [VLANs Part 1 - LANs, Broadcast Domains, and Access Ports](<VLANs Part 1 - LANs, Broadcast Domains, and Access Ports.md>)
+- [VLANs Part 2 - Trunks, 802.1Q, and ROAS](<VLANs Part 2 - Trunks, 802.1Q, and ROAS.md>)
+- [DTP & VTP - Slide Summary](<DTP & VTP - Slide Summary.md>)

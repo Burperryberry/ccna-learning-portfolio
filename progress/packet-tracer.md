@@ -6,7 +6,7 @@ cssclasses: [packet-tracer-progress-dashboard]
 # Packet Tracer Progress
 
 > [!info] Last synchronized
-> 2026-07-17 10:04 AM EDT · Tracking 12 labs
+> 2026-07-17 10:15 AM EDT · Tracking 12 labs
 
 ## Current session
 
