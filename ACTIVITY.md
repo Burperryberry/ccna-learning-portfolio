@@ -4,8 +4,8 @@ This page is generated from publishable activity in the CCNA Obsidian vault.
 
 | Last updated | Area | Artifact |
 |---|---|---|
-| 2026-07-17 09:55 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-07-17 09:55 EDT | Packet Tracer Progress | [Lab Status](progress/lab-status.md) |
+| 2026-07-17 10:04 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
+| 2026-07-17 10:04 EDT | Packet Tracer Progress | [Lab Status](progress/lab-status.md) |
 | 2026-07-17 09:43 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
 | 2026-07-17 09:14 EDT | STP | [STP Part 1 - Redundancy, Root Bridge, and Port Roles](notes/STP/STP%20Part%201%20-%20Redundancy%2C%20Root%20Bridge%2C%20and%20Port%20Roles.md) |
 | 2026-07-16 08:11 EDT | DTP & VTP | [DTP & VTP - Slide Summary](notes/DTP%20%26%20VTP/DTP%20%26%20VTP%20-%20Slide%20Summary.md) |
