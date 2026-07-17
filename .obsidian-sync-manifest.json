@@ -1,0 +1,13 @@
+{
+  "managed_files": [
+    "ACTIVITY.md",
+    "notes/DTP & VTP/DTP & VTP - Slide Summary.md",
+    "notes/STP/STP Part 1 - Redundancy, Root Bridge, and Port Roles.md",
+    "notes/VLANs/VLANs Part 1 - LANs, Broadcast Domains, and Access Ports.md",
+    "notes/VLANs/VLANs Part 2 - Trunks, 802.1Q, and ROAS.md",
+    "notes/VLANs/VLANs Part 3 - Native VLANs, Multilayer Switching, and SVIs.md",
+    "progress/anki.md",
+    "progress/lab-status.md",
+    "progress/packet-tracer.md"
+  ]
+}

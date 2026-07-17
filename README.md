@@ -5,10 +5,22 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** DTP and VTP
+- **Current topic:** STP
 - **Packet Tracer labs:** 10 of 12 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, and Anki
 - **Snapshot date:** July 16, 2026
+
+<!-- OBSIDIAN_SYNC:START -->
+## Recent Activity
+
+- [Packet Tracer Dashboard](progress/packet-tracer.md)
+- [Lab Status](progress/lab-status.md)
+- [Anki Progress Dashboard](progress/anki.md)
+- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](notes/STP/STP%20Part%201%20-%20Redundancy%2C%20Root%20Bridge%2C%20and%20Port%20Roles.md)
+- [DTP & VTP - Slide Summary](notes/DTP%20%26%20VTP/DTP%20%26%20VTP%20-%20Slide%20Summary.md)
+
+See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).
+<!-- OBSIDIAN_SYNC:END -->
 
 ## Portfolio sections
 
