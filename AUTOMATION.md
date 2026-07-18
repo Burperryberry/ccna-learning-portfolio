@@ -1,15 +1,37 @@
-# Obsidian portfolio automation
+# Portfolio automation
 
-This repository can publish a GitHub-friendly view of the CCNA Obsidian vault without changing the vault itself.
+This repository includes separate workflows for publishing Anki progress and selected Obsidian content. The Anki workflow is the nightly GitHub sync.
 
-## What is published
+## Nightly Anki progress sync
 
-- Study notes are copied to `notes/` while preserving topic folders.
-- The Anki and Packet Tracer Markdown dashboards are copied to `progress/`.
-- Obsidian-only wiki links are converted to readable text.
-- `ACTIVITY.md` and the README recent-activity section are regenerated from vault modification times.
+`automation/export_anki_progress.py` reads a stable temporary snapshot of the local Anki collection and generates both public dashboards:
 
-The sync excludes Obsidian internals, trash, local tracker state, and Packet Tracer binaries. Add this frontmatter to any Markdown note that should stay private:
+- `progress/anki.md`
+- `flashcard-progress/Anki Progress Dashboard.md`
+
+Only aggregate statistics are exported: workload counts, review totals, study time, answer-button success rates, streaks, and deck-level weak-topic signals. Card questions, answers, note fields, and raw review history are never written to the repository. The live Anki database is opened only through a copied SQLite/WAL snapshot and is never modified.
+
+The installed runtime uses a dedicated checkout under `~/Library/Application Support/CCNA Sync/`. Keeping the runner and checkout outside `Documents` prevents macOS privacy controls from blocking the background LaunchAgent.
+
+Run the complete Anki export, commit, push, and draft-PR workflow manually:
+
+```bash
+"$HOME/Library/Application Support/CCNA Sync/repo/automation/run_anki_sync.sh"
+```
+
+Install or reload the 8:00 PM local-time schedule:
+
+```bash
+"$HOME/Library/Application Support/CCNA Sync/repo/automation/install_anki_launch_agent.sh"
+```
+
+Operational output is written to `~/Library/Logs/ccna-anki-sync.log`. The job refuses to publish if GitHub authentication is unavailable, the checkout has uncommitted changes, or its branch has diverged from `origin/main`.
+
+## Obsidian portfolio export
+
+The separate Obsidian generator can publish selected study notes and GitHub-friendly progress pages without changing the vault itself.
+
+It excludes Obsidian internals, trash, local tracker state, and Packet Tracer binaries. Add this frontmatter to any Markdown note that should stay private:
 
 ```yaml
 ---
@@ -17,28 +39,10 @@ publish: false
 ---
 ```
 
-The script also stops before writing when it recognizes a high-confidence private-key or service-token pattern. This is a backstop, not a substitute for reviewing the draft pull request.
-
-## Manual use
-
-Preview changes:
+Preview Obsidian changes:
 
 ```bash
 python3 automation/sync_obsidian.py --vault "$HOME/Documents/CCNA" --check
 ```
 
-Run the full sync, commit, push, and draft-PR workflow from the dedicated `agent/obsidian-sync` worktree:
-
-```bash
-automation/run_sync.sh
-```
-
-The full workflow requires an authenticated GitHub CLI session. Repair an expired session with:
-
-```bash
-gh auth refresh -h github.com
-```
-
-## Schedule
-
-`automation/install_launch_agent.sh` installs a macOS LaunchAgent that runs daily at 8:00 PM local time. It writes operational output to `~/Library/Logs/ccna-obsidian-sync.log` and will not publish when the GitHub login is unavailable or the automation worktree has uncommitted changes.
+The previous Obsidian LaunchAgent is not used for the nightly Anki sync because macOS denied its background process access to the checkout under `Documents`.

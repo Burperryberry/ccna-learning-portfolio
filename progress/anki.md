@@ -10,29 +10,32 @@ cssclasses:
 
 # Anki CCNA Progress
 
-> [!info] Last synchronized
-> **2026-07-17 09:42 AM EDT** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`
+> [!info] Nightly snapshot
+> **2026-07-18** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`
+
+> [!note] Privacy
+> This page contains aggregate study statistics only. Card questions, answers, note fields, and raw review history are never exported.
 
 ## Current workload
 
 | Due now | New | Learning | Mature | Suspended | Total cards |
 |---:|---:|---:|---:|---:|---:|
-| **221** | **102** | **62** | **0** | **0** | **367** |
+| **211** | **102** | **61** | **0** | **0** | **367** |
 
 ## Today
 
 | Reviews | Study time | Again | Hard | Good | Easy | Success rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| **51** | **8 min** | 4 | 0 | 47 | 0 | **92.2%** |
+| **0** | **0 min** | 0 | 0 | 0 | 0 | **—** |
 
 ## Momentum
 
 | Metric | Last 7 days | Last 30 days |
 |---|---:|---:|
-| Reviews | **226** | **226** |
-| Study time | **43 min** | **43 min** |
-| Success rate | **88.5%** | **88.5%** |
-| Again presses | 26 | 26 |
+| Reviews | **279** | **279** |
+| Study time | **52 min** | **52 min** |
+| Success rate | **88.2%** | **88.2%** |
+| Again presses | 33 | 33 |
 
 > [!success] Current streak
 > **2 days** with at least one review. A streak remains active through the end of the following day.
@@ -44,7 +47,6 @@ cssclasses:
 
 | Date | Reviews | Time | Success | Activity |
 |---|---:|---:|---:|---|
-| 2026-07-04 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-05 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-06 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-07 | 0 | — | — | `░░░░░░░░░░` |
@@ -57,7 +59,8 @@ cssclasses:
 | 2026-07-14 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-15 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-16 | 175 | 35 min | 87.4% | `██████████` |
-| 2026-07-17 | 51 | 8 min | 92.2% | `███░░░░░░░` |
+| 2026-07-17 | 104 | 17 min | 89.4% | `██████░░░░` |
+| 2026-07-18 | 0 | — | — | `░░░░░░░░░░` |
 
 ## Topics to revisit
 
@@ -65,6 +68,12 @@ Subdecks are ordered by highest **Again** rate over the last 30 days. Rows need 
 
 | Deck / topic | Reviews | Again | Success rate |
 |---|---:|---:|---:|
-| Day 17 Flashcards - VLANs (Part 2) | 81 | 12 | 85.2% |
+| Day 17 Flashcards - VLANs (Part 2) | 119 | 17 | 85.7% |
 | Day 19 Flashcards - DTP & VTP | 119 | 12 | 89.9% |
-| Day 16 Flashcards - VLANs (Part 1) | 26 | 2 | 92.3% |
+| Day 16 Flashcards - VLANs (Part 1) | 39 | 3 | 92.3% |
+
+## How to use this dashboard
+
+- Prioritize the subdecks near the top of **Topics to revisit**.
+- A success rate is the percentage of review events answered **Hard**, **Good**, or **Easy** instead of **Again**.
+- The GitHub snapshot refreshes nightly at 8:00 PM local time.
