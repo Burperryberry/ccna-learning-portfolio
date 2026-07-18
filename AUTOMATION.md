@@ -19,13 +19,15 @@ Run the complete Anki export, commit, push, and draft-PR workflow manually:
 "$HOME/Library/Application Support/CCNA Sync/repo/automation/run_anki_sync.sh"
 ```
 
-Install or reload the 8:00 PM local-time schedule:
+Install or reload the schedule:
 
 ```bash
 "$HOME/Library/Application Support/CCNA Sync/repo/automation/install_anki_launch_agent.sh"
 ```
 
 Operational output is written to `~/Library/Logs/ccna-anki-sync.log`. The job refuses to publish if GitHub authentication is unavailable, the checkout has uncommitted changes, or its branch has diverged from `origin/main`.
+
+The LaunchAgent runs nightly at 8:00 PM local time. macOS coalesces a missed calendar event after ordinary sleep, and `RunAtLoad` provides a catch-up run after the user logs in following a shutdown or logout. Repeated same-day runs are safe because the exporter and Git workflow are idempotent.
 
 ## Obsidian portfolio export
 
