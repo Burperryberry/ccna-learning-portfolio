@@ -11,7 +11,7 @@ cssclasses:
 # Anki CCNA Progress
 
 > [!info] Nightly snapshot
-> **2026-07-20** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`
+> **2026-07-21** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`
 
 > [!note] Privacy
 > This page contains aggregate study statistics only. Card questions, answers, note fields, and raw review history are never exported.
@@ -20,25 +20,25 @@ cssclasses:
 
 | Due now | New | Learning | Mature | Suspended | Total cards |
 |---:|---:|---:|---:|---:|---:|
-| **196** | **66** | **61** | **0** | **0** | **367** |
+| **275** | **67** | **74** | **0** | **0** | **447** |
 
 ## Today
 
 | Reviews | Study time | Again | Hard | Good | Easy | Success rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| **125** | **20 min** | 9 | 0 | 116 | 0 | **92.8%** |
+| **182** | **49 min** | 29 | 1 | 152 | 0 | **84.1%** |
 
 ## Momentum
 
 | Metric | Last 7 days | Last 30 days |
 |---|---:|---:|
-| Reviews | **404** | **404** |
-| Study time | **72 min** | **72 min** |
-| Success rate | **89.6%** | **89.6%** |
-| Again presses | 42 | 42 |
+| Reviews | **586** | **586** |
+| Study time | **121 min** | **121 min** |
+| Success rate | **87.9%** | **87.9%** |
+| Again presses | 71 | 71 |
 
 > [!success] Current streak
-> **1 day** with at least one review. A streak remains active through the end of the following day.
+> **2 days** with at least one review. A streak remains active through the end of the following day.
 
 > [!note] Mature-card retention
 > Over the last 30 days, mature cards had an answer-button success rate of **—** across **0** reviews. Here, mature means the card's prior interval was at least 21 days.
@@ -47,7 +47,6 @@ cssclasses:
 
 | Date | Reviews | Time | Success | Activity |
 |---|---:|---:|---:|---|
-| 2026-07-07 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-08 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-09 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-10 | 0 | — | — | `░░░░░░░░░░` |
@@ -61,6 +60,7 @@ cssclasses:
 | 2026-07-18 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-19 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-20 | 125 | 20 min | 92.8% | `███████░░░` |
+| 2026-07-21 | 182 | 49 min | 84.1% | `██████████` |
 
 ## Topics to revisit
 
@@ -68,7 +68,11 @@ Subdecks are ordered by highest **Again** rate over the last 30 days. Rows need 
 
 | Deck / topic | Reviews | Again | Success rate |
 |---|---:|---:|---:|
+| Day 21-2 Flashcards - BPDU Guard & BPDU Filter | 56 | 11 | 80.4% |
+| Day 21-3 Flashcards - Root Guard | 16 | 3 | 81.2% |
+| Day 21 Flashcards - STP (Part 2) | 83 | 12 | 85.5% |
 | Day 17 Flashcards - VLANs (Part 2) | 119 | 17 | 85.7% |
+| Day 21-4 Flashcards - Loop Guard | 27 | 3 | 88.9% |
 | Day 19 Flashcards - DTP & VTP | 161 | 16 | 90.1% |
 | Day 16 Flashcards - VLANs (Part 1) | 46 | 4 | 91.3% |
 | Day 20 Flashcards - STP (Part 1) | 76 | 4 | 94.7% |
