@@ -2,7 +2,7 @@
 
 This folder contains the Cisco Packet Tracer lab files tracked in the CCNA Obsidian vault.
 
-Status snapshot: **10 of 12 labs complete** on July 16, 2026.
+Status snapshot: **13 of 14 labs complete** on July 22, 2026.
 
 | Day | Lab | Status | File |
 |---:|---|---|---|
@@ -16,7 +16,9 @@ Status snapshot: **10 of 12 labs complete** on July 16, 2026.
 | 12 | Life of a Packet | Complete | [Open](<Day 12 Lab - Life of a Packet.pkt>) |
 | 16 | VLANs (Part 1) | Complete | [Open](<Day 16 Lab - VLANs (Part 1).pkt>) |
 | 17 | VLANs (Part 2) | Complete | [Open](<Day 17 Lab - VLANs (Part 2).pkt>) |
-| 18 | VLANs (Part 3) | Ready | [Open](<Day 18 Lab - VLANs (Part 3).pkt>) |
-| 19 | DTP and VTP | In progress | [Open](<Day 19 Lab - DTP & VTP.pkt>) |
+| 18 | VLANs (Part 3) | Complete | [Open](<Day 18 Lab - VLANs (Part 3).pkt>) |
+| 19 | DTP and VTP | Complete | [Open](<Day 19 Lab - DTP & VTP.pkt>) |
+| 20 | Analyzing STP | Complete | [Open](<Day 20 Lab - Analyzing STP.pkt>) |
+| 21 | Configuring Spanning Tree | Ready | [Open](<Day 21 Lab - Configuring Spanning Tree.pkt>) |
 
 Packet Tracer `.pkt` files are binary. Download a file and open it with Cisco Packet Tracer to inspect or continue the lab.

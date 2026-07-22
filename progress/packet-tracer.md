@@ -6,7 +6,7 @@ cssclasses: [packet-tracer-progress-dashboard]
 # Packet Tracer Progress
 
 > [!info] Last synchronized
-> 2026-07-17 10:15 AM EDT · Tracking 12 labs
+> 2026-07-22 09:13 AM EDT · Tracking 14 labs
 
 ## Current session
 
@@ -14,9 +14,13 @@ Packet Tracer is closed
 
 | Today | Total time | Completed | Started |
 |---:|---:|---:|---:|
-| 5h 29m | 7h 35m | 10/12 | 1/12 |
+| 0 min | 1h 31m | 13/14 | 2/14 |
 
 Completion is manual because `.pkt` files do not publish a dependable score. Use the completion checklist when a lab is done.
+
+
+> [!note] Off-device time
+> **30 min** of manually recorded study time is included in the total and daily activity.
 
 ## Lab inventory
 
@@ -32,18 +36,15 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | ✅ Complete | 12 | Day 12 Lab - Life of a Packet | 0 min | — | Open lab |
 | ✅ Complete | 16 | Day 16 Lab - VLANs (Part 1) | 0 min | — | Open lab |
 | ✅ Complete | 17 | Day 17 Lab - VLANs (Part 2) | 0 min | — | Open lab |
-| ○ Ready | 18 | Day 18 Lab - VLANs (Part 3) | 0 min | — | Open lab |
-| 🔵 In progress | 19 | Day 19 Lab - DTP & VTP | 7h 35m | 2026-07-17 08:34 AM EDT | Open lab |
+| ✅ Complete | 18 | Day 18 Lab - VLANs (Part 3) | 13 min | 2026-07-20 06:53 PM EDT | Open lab |
+| ✅ Complete | 19 | Day 19 Lab - DTP & VTP | 48 min | 2026-07-21 10:26 AM EDT | Open lab |
+| ✅ Complete | 20 | Day 20 Lab - Analyzing STP | 0 min | — | Open lab |
+| ○ Ready | 21 | Day 21 Lab - Configuring Spanning Tree | 0 min | — | Open lab |
 
 ## 14-day activity
 
 | Date | Lab time | Activity |
 |---|---:|---|
-| 2026-07-04 | 0 min | ░░░░░░░░░░ |
-| 2026-07-05 | 0 min | ░░░░░░░░░░ |
-| 2026-07-06 | 0 min | ░░░░░░░░░░ |
-| 2026-07-07 | 0 min | ░░░░░░░░░░ |
-| 2026-07-08 | 0 min | ░░░░░░░░░░ |
 | 2026-07-09 | 0 min | ░░░░░░░░░░ |
 | 2026-07-10 | 0 min | ░░░░░░░░░░ |
 | 2026-07-11 | 0 min | ░░░░░░░░░░ |
@@ -51,8 +52,13 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | 2026-07-13 | 0 min | ░░░░░░░░░░ |
 | 2026-07-14 | 0 min | ░░░░░░░░░░ |
 | 2026-07-15 | 0 min | ░░░░░░░░░░ |
-| 2026-07-16 | 2h 6m | ████░░░░░░ |
-| 2026-07-17 | 5h 29m | ██████████ |
+| 2026-07-16 | 0 min | ░░░░░░░░░░ |
+| 2026-07-17 | 40 min | █████████░ |
+| 2026-07-18 | 0 min | ░░░░░░░░░░ |
+| 2026-07-19 | 0 min | ░░░░░░░░░░ |
+| 2026-07-20 | 43 min | ██████████ |
+| 2026-07-21 | 8 min | ██░░░░░░░░ |
+| 2026-07-22 | 0 min | ░░░░░░░░░░ |
 
 > [!tip] How tracking works
 > The background tracker checks once a minute while Packet Tracer is running, records study time, notices saved lab changes, and keeps vault copies current.

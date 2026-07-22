@@ -18,7 +18,9 @@ PROGRESS_SOURCES = {
     Path("Anki Progress/Anki Progress Dashboard.md"): Path("progress/anki.md"),
     Path("Packet Tracer Progress/Lab Status.md"): Path("progress/lab-status.md"),
     Path("Packet Tracer Progress/Packet Tracer Dashboard.md"): Path("progress/packet-tracer.md"),
+    Path("Udemy Progress/Udemy Progress Dashboard.md"): Path("progress/udemy.md"),
 }
+NOTE_ROOT = "Notes"
 MANIFEST = Path(".obsidian-sync-manifest.json")
 README_START = "<!-- OBSIDIAN_SYNC:START -->"
 README_END = "<!-- OBSIDIAN_SYNC:END -->"
@@ -84,6 +86,8 @@ def notes_friendly(relative_source: Path, text: str) -> str:
             target_path = Path(path_text)
             if not path_text.lower().endswith(".md"):
                 target_path = Path(f"{path_text}.md")
+            if target_path.parts and target_path.parts[0].casefold() == NOTE_ROOT.casefold():
+                target_path = Path(*target_path.parts[1:])
             if "/" not in path_text:
                 target_path = relative_source.parent / target_path
             start = relative_source.parent.as_posix() or "."
@@ -103,7 +107,16 @@ def progress_friendly(relative_source: Path, text: str) -> str:
     """Remove local operating instructions that do not belong in the public portfolio."""
     if relative_source == Path("Anki Progress/Anki Progress Dashboard.md"):
         text = text.split("\n## How to use this dashboard", 1)[0].rstrip() + "\n"
+    if relative_source == Path("Udemy Progress/Udemy Progress Dashboard.md"):
+        text = text.split("\n## How to update this dashboard", 1)[0].rstrip() + "\n"
     return github_friendly(text)
+
+
+def published_note_path(relative_source: Path) -> Path:
+    """Remove the vault-only Notes root from public note destinations."""
+    if relative_source.parts and relative_source.parts[0].casefold() == NOTE_ROOT.casefold():
+        return Path(*relative_source.parts[1:])
+    return relative_source
 
 
 def find_content_notes(vault: Path) -> list[Path]:
@@ -196,8 +209,10 @@ def build_outputs(vault: Path, repo: Path) -> tuple[dict[Path, str], list[tuple[
         text = source.read_text(encoding="utf-8")
         if opted_out(text):
             continue
-        destination = Path("notes") / source.relative_to(vault)
-        outputs[destination] = notes_friendly(source.relative_to(vault), text)
+        relative_source = source.relative_to(vault)
+        relative_destination = published_note_path(relative_source)
+        destination = Path("notes") / relative_destination
+        outputs[destination] = notes_friendly(relative_destination, text)
         activity_items.append((source, destination))
 
     for relative_source, destination in PROGRESS_SOURCES.items():

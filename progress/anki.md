@@ -11,7 +11,7 @@ cssclasses:
 # Anki CCNA Progress
 
 > [!info] Nightly snapshot
-> **2026-07-21** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`
+> **2026-07-22** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`
 
 > [!note] Privacy
 > This page contains aggregate study statistics only. Card questions, answers, note fields, and raw review history are never exported.
@@ -20,13 +20,13 @@ cssclasses:
 
 | Due now | New | Learning | Mature | Suspended | Total cards |
 |---:|---:|---:|---:|---:|---:|
-| **275** | **67** | **74** | **0** | **0** | **447** |
+| **341** | **67** | **74** | **0** | **0** | **447** |
 
 ## Today
 
 | Reviews | Study time | Again | Hard | Good | Easy | Success rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| **182** | **49 min** | 29 | 1 | 152 | 0 | **84.1%** |
+| **0** | **0 min** | 0 | 0 | 0 | 0 | **—** |
 
 ## Momentum
 
@@ -47,7 +47,6 @@ cssclasses:
 
 | Date | Reviews | Time | Success | Activity |
 |---|---:|---:|---:|---|
-| 2026-07-08 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-09 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-10 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-11 | 0 | — | — | `░░░░░░░░░░` |
@@ -61,6 +60,7 @@ cssclasses:
 | 2026-07-19 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-20 | 125 | 20 min | 92.8% | `███████░░░` |
 | 2026-07-21 | 182 | 49 min | 84.1% | `██████████` |
+| 2026-07-22 | 0 | — | — | `░░░░░░░░░░` |
 
 ## Topics to revisit
 

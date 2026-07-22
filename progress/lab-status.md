@@ -17,8 +17,10 @@ Tick a lab when you consider it complete. The dashboard reads these checks; add 
 - [x] Day 12 Lab - Life of a Packet
 - [x] Day 16 Lab - VLANs (Part 1)
 - [x] Day 17 Lab - VLANs (Part 2)
-- [ ] Day 18 Lab - VLANs (Part 3)
-- [ ] Day 19 Lab - DTP & VTP
+- [x] Day 18 Lab - VLANs (Part 3)
+- [x] Day 19 Lab - DTP & VTP
+- [x] Day 20 Lab - Analyzing STP
+- [ ] Day 21 Lab - Configuring Spanning Tree
 <!-- PACKET TRACER LABS END -->
 
 ## Lab notes
