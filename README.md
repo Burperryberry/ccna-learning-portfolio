@@ -5,10 +5,10 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** STP
-- **Packet Tracer labs:** 10 of 12 marked complete
-- **Study system:** Cisco Packet Tracer, Obsidian, and Anki
-- **Snapshot date:** July 16, 2026
+- **Current topic:** STP Part 2
+- **Packet Tracer labs:** 13 of 14 marked complete
+- **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
+- **Snapshot date:** July 22, 2026
 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
@@ -16,8 +16,8 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 - [Packet Tracer Dashboard](progress/packet-tracer.md)
 - [Lab Status](progress/lab-status.md)
 - [Anki Progress Dashboard](progress/anki.md)
-- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](notes/STP/STP%20Part%201%20-%20Redundancy%2C%20Root%20Bridge%2C%20and%20Port%20Roles.md)
-- [DTP & VTP - Slide Summary](notes/DTP%20%26%20VTP/DTP%20%26%20VTP%20-%20Slide%20Summary.md)
+- [Udemy Progress Dashboard](progress/udemy.md)
+- [Loop Guard - Unidirectional Link Protection](notes/STP/STP%20Part%202/Loop%20Guard%20-%20Unidirectional%20Link%20Protection.md)
 
 See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).
 <!-- OBSIDIAN_SYNC:END -->
@@ -27,7 +27,8 @@ See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progr
 | Folder | Contents |
 |---|---|
 | [`labs/`](labs/) | Packet Tracer `.pkt` files and the lab completion snapshot |
-| [`notes/`](notes/) | Topic notes covering VLANs, trunks, SVIs, DTP, and VTP |
+| [`notes/`](notes/) | Topic notes covering VLANs, trunking, DTP/VTP, and spanning tree |
+| [`progress/`](progress/) | Current Anki, Packet Tracer, lab, and Udemy dashboards |
 | [`flashcard-progress/`](flashcard-progress/) | Anki workload, review activity, retention, and weak-topic dashboard |
 
 ## Repository structure
@@ -36,6 +37,7 @@ See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progr
 ccna-learning-portfolio/
 ├── labs/
 ├── notes/
+├── progress/
 └── flashcard-progress/
 ```
 
@@ -46,6 +48,7 @@ ccna-learning-portfolio/
 - Static routing and packet-flow troubleshooting
 - VLANs, 802.1Q trunks, router-on-a-stick, and SVIs
 - Dynamic Trunking Protocol and VLAN Trunking Protocol
+- Spanning Tree Protocol, PortFast, and STP protection features
 - Spaced-repetition review with Anki
 
 ## Tools

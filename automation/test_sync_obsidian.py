@@ -48,6 +48,28 @@ class SyncObsidianTests(unittest.TestCase):
         self.assertIn(sync_obsidian.README_START, readme)
         self.assertLess(readme.index(sync_obsidian.README_START), readme.index("## Portfolio sections"))
 
+    def test_notes_root_is_not_repeated_in_public_path(self):
+        self.write_note(
+            "Notes/STP/STP.md",
+            "# STP\n\nSee [[Notes/VLANs/VLANs|VLAN notes]].\n",
+        )
+        sync_obsidian.sync(self.vault, self.repo, check=False)
+        published = self.repo / "notes/STP/STP.md"
+        self.assertTrue(published.exists())
+        self.assertFalse((self.repo / "notes/Notes/STP/STP.md").exists())
+        self.assertIn("[VLAN notes](<../VLANs/VLANs.md>)", published.read_text())
+
+    def test_udemy_dashboard_publishes_as_progress(self):
+        self.write_note(
+            "Udemy Progress/Udemy Progress Dashboard.md",
+            "# Udemy Progress\n\n33% complete.\n\n## How to update this dashboard\n\nLocal steps.\n",
+        )
+        sync_obsidian.sync(self.vault, self.repo, check=False)
+        published = self.repo / "progress/udemy.md"
+        self.assertTrue(published.exists())
+        self.assertIn("33% complete", published.read_text())
+        self.assertNotIn("Local steps", published.read_text())
+
     def test_publish_false_is_private(self):
         self.write_note("Private.md", "---\npublish: false\n---\n# Private\n")
         self.write_note("Public.md", "# Public\n")
