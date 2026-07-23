@@ -6,7 +6,7 @@ cssclasses: [packet-tracer-progress-dashboard]
 # Packet Tracer Progress
 
 > [!info] Last synchronized
-> 2026-07-22 09:13 AM EDT · Tracking 14 labs
+> 2026-07-23 09:44 AM EDT · Tracking 15 labs
 
 ## Current session
 
@@ -14,7 +14,7 @@ Packet Tracer is closed
 
 | Today | Total time | Completed | Started |
 |---:|---:|---:|---:|
-| 0 min | 1h 31m | 13/14 | 2/14 |
+| 44 min | 2h 15m | 15/15 | 4/15 |
 
 Completion is manual because `.pkt` files do not publish a dependable score. Use the completion checklist when a lab is done.
 
@@ -37,15 +37,15 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | ✅ Complete | 16 | Day 16 Lab - VLANs (Part 1) | 0 min | — | Open lab |
 | ✅ Complete | 17 | Day 17 Lab - VLANs (Part 2) | 0 min | — | Open lab |
 | ✅ Complete | 18 | Day 18 Lab - VLANs (Part 3) | 13 min | 2026-07-20 06:53 PM EDT | Open lab |
-| ✅ Complete | 19 | Day 19 Lab - DTP & VTP | 48 min | 2026-07-21 10:26 AM EDT | Open lab |
+| ✅ Complete | 19 | Day 19 Lab - DTP & VTP | 1h 19m | 2026-07-23 09:11 AM EDT | Open lab |
 | ✅ Complete | 20 | Day 20 Lab - Analyzing STP | 0 min | — | Open lab |
-| ○ Ready | 21 | Day 21 Lab - Configuring Spanning Tree | 0 min | — | Open lab |
+| ✅ Complete | 21 | Day 21 Lab - Configuring Spanning Tree | 13 min | 2026-07-23 09:24 AM EDT | Open lab |
+| ✅ Complete | 22 | Day 22 Lab - Rapid STP | <1 min | 2026-07-23 09:24 AM EDT | Open lab |
 
 ## 14-day activity
 
 | Date | Lab time | Activity |
 |---|---:|---|
-| 2026-07-09 | 0 min | ░░░░░░░░░░ |
 | 2026-07-10 | 0 min | ░░░░░░░░░░ |
 | 2026-07-11 | 0 min | ░░░░░░░░░░ |
 | 2026-07-12 | 0 min | ░░░░░░░░░░ |
@@ -59,6 +59,7 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | 2026-07-20 | 43 min | ██████████ |
 | 2026-07-21 | 8 min | ██░░░░░░░░ |
 | 2026-07-22 | 0 min | ░░░░░░░░░░ |
+| 2026-07-23 | 44 min | ██████████ |
 
 > [!tip] How tracking works
 > The background tracker checks once a minute while Packet Tracer is running, records study time, notices saved lab changes, and keeps vault copies current.

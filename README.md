@@ -5,10 +5,10 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** STP Part 2
-- **Packet Tracer labs:** 13 of 14 marked complete
+- **Current topic:** EtherChannel
+- **Packet Tracer labs:** 15 of 15 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
-- **Snapshot date:** July 22, 2026
+- **Snapshot date:** July 23, 2026
 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
