@@ -2,6 +2,11 @@
   "managed_files": [
     "ACTIVITY.md",
     "notes/DTP & VTP/DTP & VTP - Slide Summary.md",
+    "notes/Dynamic Routing/Dynamic Routing - Fundamentals.md",
+    "notes/EtherChannel/EtherChannel - Link Aggregation.md",
+    "notes/RIP & EIGRP/EIGRP Terminology and Unequal-Cost Load Balancing.md",
+    "notes/RIP & EIGRP/RIP & EIGRP - Configuration and Concepts.md",
+    "notes/RSTP/Rapid Spanning Tree Protocol (RSTP).md",
     "notes/STP/STP Part 1 - Redundancy, Root Bridge, and Port Roles.md",
     "notes/STP/STP Part 2/BPDU Guard, BPDU Filter, and ErrDisable.md",
     "notes/STP/STP Part 2/Loop Guard - Unidirectional Link Protection.md",
