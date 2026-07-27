@@ -6,28 +6,24 @@ cssclasses: [udemy-progress-dashboard]
 # Udemy CCNA Progress
 
 > [!info] Last synchronized
-> **2026-07-23 09:27 AM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **2026-07-27 07:01 AM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
 
 ## Course position
 
 | Completed videos | Total videos | Course progress | Completed sections | Current section |
 |---:|---:|---:|---:|---:|
-| **46** | **129** | **35.7%** `████░░░░░░` | **22 / 66** | **24 / 66** |
+| **49** | **129** | **38.0%** `████░░░░░░` | **24 / 66** | **25 / 66** |
 
 *Current section reflects your active study position; completion values reflect the last Udemy synchronization.*
 
 > [!tip] Continue studying
-> **Day 23 · EtherChannel** — [Continue Day 23 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **Day 24 · Dynamic Routing** — [Continue Day 24 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
 >
 > Related material: Packet Tracer Progress
 
 ## Finish queue
 
-This earlier section still contains one unfinished video. Clearing it would bring the course sequence fully up to date through Day 22.
-
-| Section | Topic | Progress |
-|---:|---|---:|
-| 16 | Day 15 - Subnetting (part 3 - VLSM) | **1 / 2** |
+✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 23.
 
 ## Curriculum
 
@@ -50,7 +46,7 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 |   ✅    |      13 | Day 12 - The Life of a Packet                                                 |  2 / 2 |     34min |
 |   ✅    |      14 | Day 13 - Subnetting (part 1)                                                  |  1 / 1 |     27min |
 |   ✅    |      15 | Day 14: Subnetting (part 2)                                                   |  1 / 1 |     24min |
-|   🔵   |      16 | Day 15 - Subnetting (part 3 - VLSM)                                           |  1 / 2 |     38min |
+|   ✅    |      16 | Day 15 - Subnetting (part 3 - VLSM)                                           |  2 / 2 |     38min |
 |   ✅    |      17 | Day 16 - VLANs (part 1)                                                       |  2 / 2 |     33min |
 |   ✅    |      18 | Day 17 - VLANs (part 2)                                                       |  2 / 2 |     50min |
 |   ✅    |      19 | Day 18 - VLANs (part 3)                                                       |  2 / 2 |     39min |
@@ -58,7 +54,7 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 |   ✅    |      21 | Day 20 - Spanning Tree Protocol (part 1)                                      |  2 / 2 |     47min |
 |   ✅    |      22 | Day 21 - Spanning Tree Protocol (part 2)                                      |  6 / 6 |  2hr 4min |
 |   ✅    |      23 | Day 22 - Rapid Spanning Tree Protocol (RSTP)                                  |  2 / 2 |     50min |
-|   ○    |      24 | Day 23 - EtherChannel                                                         |  0 / 2 |     53min |
+|   ✅    |      24 | Day 23 - EtherChannel                                                         |  2 / 2 |     53min |
 |   ○    |      25 | Day 24 - Dynamic Routing                                                      |  0 / 2 |     54min |
 |   ○    |      26 | Day 25 - RIP & EIGRP                                                          |  0 / 2 |  1hr 5min |
 |   ○    |      27 | Day 26 - OSPF (part 1)                                                        |  0 / 2 |     50min |
