@@ -6,24 +6,24 @@ cssclasses: [udemy-progress-dashboard]
 # Udemy CCNA Progress
 
 > [!info] Last synchronized
-> **2026-07-27 11:37 AM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **2026-07-27 07:26 PM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
 
 ## Course position
 
 | Completed videos | Total videos | Course progress | Completed sections | Current section |
 |---:|---:|---:|---:|---:|
-| **51** | **129** | **39.5%** `████░░░░░░` | **25 / 66** | **26 / 66** |
+| **53** | **129** | **41.1%** `████░░░░░░` | **26 / 66** | **27 / 66** |
 
 *Current section reflects your active study position; completion values reflect the last Udemy synchronization.*
 
 > [!tip] Continue studying
-> **Day 25 · RIP & EIGRP** — [Continue Day 25 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **Day 26 · OSPF (part 1)** — [Continue Day 26 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
 >
 > Related material: Packet Tracer Progress
 
 ## Finish queue
 
-✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 24.
+✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 25.
 
 ## Curriculum
 
@@ -56,7 +56,7 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 |   ✅    |      23 | Day 22 - Rapid Spanning Tree Protocol (RSTP)                                  |  2 / 2 |     50min |
 |   ✅    |      24 | Day 23 - EtherChannel                                                         |  2 / 2 |     53min |
 |   ✅    |      25 | Day 24 - Dynamic Routing                                                      |  2 / 2 |     54min |
-|   ○    |      26 | Day 25 - RIP & EIGRP                                                          |  0 / 2 |  1hr 5min |
+|   ✅    |      26 | Day 25 - RIP & EIGRP                                                          |  2 / 2 |  1hr 5min |
 |   ○    |      27 | Day 26 - OSPF (part 1)                                                        |  0 / 2 |     50min |
 |   ○    |      28 | Day 27 - OSPF (part 2)                                                        |  0 / 2 |     48min |
 |   ○    |      29 | Day 28 - OSPF (part 3)                                                        |  0 / 2 |     59min |
