@@ -5,7 +5,7 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** EtherChannel
+- **Current topic:** RIP & EIGRP
 - **Packet Tracer labs:** 15 of 15 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
 - **Snapshot date:** July 23, 2026
@@ -15,9 +15,9 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 
 - [Packet Tracer Dashboard](progress/packet-tracer.md)
 - [Lab Status](progress/lab-status.md)
-- [Anki Progress Dashboard](progress/anki.md)
 - [Udemy Progress Dashboard](progress/udemy.md)
-- [Loop Guard - Unidirectional Link Protection](notes/STP/STP%20Part%202/Loop%20Guard%20-%20Unidirectional%20Link%20Protection.md)
+- [Anki Progress Dashboard](progress/anki.md)
+- [RIP & EIGRP - Configuration and Concepts](notes/RIP%20%26%20EIGRP/RIP%20%26%20EIGRP%20-%20Configuration%20and%20Concepts.md)
 
 See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).
 <!-- OBSIDIAN_SYNC:END -->
