@@ -11,7 +11,7 @@ cssclasses:
 # Anki CCNA Progress
 
 > [!info] Nightly snapshot
-> **2026-07-27** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`, `Day 22 Flashcards - Rapid STP`, `Day 23 Flashcards - EtherChannel`, `Day 24 Flashcards - Dynamic Routing`, `Day 25 Flashcards (1) - RIP & EIGRP`
+> **2026-07-28** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`, `Day 22 Flashcards - Rapid STP`, `Day 23 Flashcards - EtherChannel`, `Day 24 Flashcards - Dynamic Routing`, `Day 25 Flashcards (1) - RIP & EIGRP`
 
 > [!note] Privacy
 > This page contains aggregate study statistics only. Card questions, answers, note fields, and raw review history are never exported.
@@ -20,22 +20,22 @@ cssclasses:
 
 | Due now | New | Learning | Mature | Suspended | Total cards |
 |---:|---:|---:|---:|---:|---:|
-| **432** | **66** | **93** | **0** | **0** | **586** |
+| **517** | **66** | **93** | **0** | **0** | **586** |
 
 ## Today
 
 | Reviews | Study time | Again | Hard | Good | Easy | Success rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| **184** | **32 min** | 16 | 1 | 167 | 0 | **91.3%** |
+| **0** | **0 min** | 0 | 0 | 0 | 0 | **—** |
 
 ## Momentum
 
 | Metric | Last 7 days | Last 30 days |
 |---|---:|---:|
-| Reviews | **483** | **887** |
-| Study time | **102 min** | **174 min** |
-| Success rate | **87.0%** | **88.2%** |
-| Again presses | 63 | 105 |
+| Reviews | **301** | **887** |
+| Study time | **53 min** | **174 min** |
+| Success rate | **88.7%** | **88.2%** |
+| Again presses | 34 | 105 |
 
 > [!success] Current streak
 > **1 day** with at least one review. A streak remains active through the end of the following day.
@@ -47,7 +47,6 @@ cssclasses:
 
 | Date | Reviews | Time | Success | Activity |
 |---|---:|---:|---:|---|
-| 2026-07-14 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-15 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-16 | 175 | 35 min | 87.4% | `██████████` |
 | 2026-07-17 | 104 | 17 min | 89.4% | `██████░░░░` |
@@ -61,6 +60,7 @@ cssclasses:
 | 2026-07-25 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-26 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-27 | 184 | 32 min | 91.3% | `██████████` |
+| 2026-07-28 | 0 | — | — | `░░░░░░░░░░` |
 
 ## Topics to revisit
 
