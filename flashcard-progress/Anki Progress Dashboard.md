@@ -11,7 +11,7 @@ cssclasses:
 # Anki CCNA Progress
 
 > [!info] Nightly snapshot
-> **2026-07-26** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`, `Day 22 Flashcards - Rapid STP`, `Day 23 Flashcards - EtherChannel`
+> **2026-07-27** · Tracking `CCNA`, `CCNA::Day 01 Flashcards - Network Devices`, `CCNA::Day 02 Flashcards - Interfaces and Cables`, `CCNA::Day 03 Flashcards - TCP-IP`, `CCNA::Day 04 Flashcards - Intro to the CLI`, `CCNA::Day 07 Flashcards - IPv4 Addresses (Part 1)`, `CCNA::Day 08 Flashcards - IPv4 Addresses (Part 2)`, `CCNA::Day 09 Flashcards - Switch Interfaces`, `Day 11 (part 2) Flashcards - Static Routing`, `Day 13 Flashcards - Subnetting`, `Day 16 Flashcards - VLANs (Part 1)`, `Day 17 Flashcards - VLANs (Part 2)`, `Day 18 Flashcards - VLANs (Part 3)`, `Day 19 Flashcards - DTP & VTP`, `Day 20 Flashcards - STP (Part 1)`, `Day 21 Flashcards - STP (Part 2)`, `Day 21-2 Flashcards - BPDU Guard & BPDU Filter`, `Day 21-3 Flashcards - Root Guard`, `Day 21-4 Flashcards - Loop Guard`, `Day 22 Flashcards - Rapid STP`, `Day 23 Flashcards - EtherChannel`, `Day 24 Flashcards - Dynamic Routing`, `Day 25 Flashcards (1) - RIP & EIGRP`
 
 > [!note] Privacy
 > This page contains aggregate study statistics only. Card questions, answers, note fields, and raw review history are never exported.
@@ -20,25 +20,25 @@ cssclasses:
 
 | Due now | New | Learning | Mature | Suspended | Total cards |
 |---:|---:|---:|---:|---:|---:|
-| **428** | **66** | **93** | **0** | **0** | **504** |
+| **432** | **66** | **93** | **0** | **0** | **586** |
 
 ## Today
 
 | Reviews | Study time | Again | Hard | Good | Easy | Success rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| **0** | **0 min** | 0 | 0 | 0 | 0 | **—** |
+| **184** | **32 min** | 16 | 1 | 167 | 0 | **91.3%** |
 
 ## Momentum
 
 | Metric | Last 7 days | Last 30 days |
 |---|---:|---:|
-| Reviews | **424** | **703** |
-| Study time | **90 min** | **142 min** |
-| Success rate | **86.8%** | **87.3%** |
-| Again presses | 56 | 89 |
+| Reviews | **483** | **887** |
+| Study time | **102 min** | **174 min** |
+| Success rate | **87.0%** | **88.2%** |
+| Again presses | 63 | 105 |
 
 > [!success] Current streak
-> **0 days** with at least one review. A streak remains active through the end of the following day.
+> **1 day** with at least one review. A streak remains active through the end of the following day.
 
 > [!note] Mature-card retention
 > Over the last 30 days, mature cards had an answer-button success rate of **—** across **0** reviews. Here, mature means the card's prior interval was at least 21 days.
@@ -47,7 +47,6 @@ cssclasses:
 
 | Date | Reviews | Time | Success | Activity |
 |---|---:|---:|---:|---|
-| 2026-07-13 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-14 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-15 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-16 | 175 | 35 min | 87.4% | `██████████` |
@@ -61,6 +60,7 @@ cssclasses:
 | 2026-07-24 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-25 | 0 | — | — | `░░░░░░░░░░` |
 | 2026-07-26 | 0 | — | — | `░░░░░░░░░░` |
+| 2026-07-27 | 184 | 32 min | 91.3% | `██████████` |
 
 ## Topics to revisit
 
@@ -71,6 +71,7 @@ Subdecks are ordered by highest **Again** rate over the last 30 days. Rows need 
 | Day 23 Flashcards - EtherChannel | 25 | 10 | 60.0% |
 | Day 21-2 Flashcards - BPDU Guard & BPDU Filter | 56 | 11 | 80.4% |
 | Day 21-3 Flashcards - Root Guard | 16 | 3 | 81.2% |
+| Day 25 Flashcards (1) - RIP & EIGRP | 76 | 11 | 85.5% |
 | Day 21 Flashcards - STP (Part 2) | 83 | 12 | 85.5% |
 | Day 17 Flashcards - VLANs (Part 2) | 119 | 17 | 85.7% |
 | Day 21-4 Flashcards - Loop Guard | 27 | 3 | 88.9% |
@@ -78,6 +79,7 @@ Subdecks are ordered by highest **Again** rate over the last 30 days. Rows need 
 | Day 22 Flashcards - Rapid STP | 91 | 8 | 91.2% |
 | Day 16 Flashcards - VLANs (Part 1) | 46 | 4 | 91.3% |
 | Day 20 Flashcards - STP (Part 1) | 76 | 4 | 94.7% |
+| Day 24 Flashcards - Dynamic Routing | 108 | 5 | 95.4% |
 
 ## How to use this dashboard
 
