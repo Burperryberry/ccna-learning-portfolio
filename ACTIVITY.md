@@ -4,10 +4,15 @@ This page is generated from publishable activity in the CCNA Obsidian vault.
 
 | Last updated | Area | Artifact |
 |---|---|---|
-| 2026-07-22 09:13 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-07-22 09:13 EDT | Packet Tracer Progress | [Lab Status](progress/lab-status.md) |
-| 2026-07-21 15:17 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
-| 2026-07-21 15:11 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
+| 2026-07-27 19:32 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
+| 2026-07-27 19:32 EDT | Packet Tracer Progress | [Lab Status](progress/lab-status.md) |
+| 2026-07-27 19:26 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
+| 2026-07-27 19:05 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
+| 2026-07-27 18:41 EDT | RIP & EIGRP | [RIP & EIGRP - Configuration and Concepts](notes/RIP%20%26%20EIGRP/RIP%20%26%20EIGRP%20-%20Configuration%20and%20Concepts.md) |
+| 2026-07-27 18:03 EDT | RIP & EIGRP | [EIGRP Terminology and Unequal-Cost Load Balancing](notes/RIP%20%26%20EIGRP/EIGRP%20Terminology%20and%20Unequal-Cost%20Load%20Balancing.md) |
+| 2026-07-27 09:57 EDT | Dynamic Routing | [Dynamic Routing - Fundamentals](notes/Dynamic%20Routing/Dynamic%20Routing%20-%20Fundamentals.md) |
+| 2026-07-23 10:30 EDT | EtherChannel | [EtherChannel - Link Aggregation](notes/EtherChannel/EtherChannel%20-%20Link%20Aggregation.md) |
+| 2026-07-22 11:46 EDT | RSTP | [Rapid Spanning Tree Protocol (RSTP)](notes/RSTP/Rapid%20Spanning%20Tree%20Protocol%20%28RSTP%29.md) |
 | 2026-07-21 14:15 EDT | STP Part 2 | [Loop Guard - Unidirectional Link Protection](notes/STP/STP%20Part%202/Loop%20Guard%20-%20Unidirectional%20Link%20Protection.md) |
 | 2026-07-21 13:26 EDT | STP Part 2 | [Root Guard - Root Bridge Protection](notes/STP/STP%20Part%202/Root%20Guard%20-%20Root%20Bridge%20Protection.md) |
 | 2026-07-21 12:56 EDT | STP Part 2 | [BPDU Guard, BPDU Filter, and ErrDisable](notes/STP/STP%20Part%202/BPDU%20Guard%2C%20BPDU%20Filter%2C%20and%20ErrDisable.md) |
