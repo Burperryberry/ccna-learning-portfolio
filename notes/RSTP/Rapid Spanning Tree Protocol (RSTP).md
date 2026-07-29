@@ -335,9 +335,9 @@ SW1 is the root because its priority `4097` is the lowest.
 
 ## Related notes
 
-- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](<STP Part 1 - Redundancy, Root Bridge, and Port Roles.md>)
-- [STP Part 2 - Port States, Timers, Toolkit, and Configuration](<STP Part 2 - Port States, Timers, Toolkit, and Configuration.md>)
-- [PortFast - Edge Ports and Configuration](<PortFast - Edge Ports and Configuration.md>)
-- [BPDU Guard, BPDU Filter, and ErrDisable](<BPDU Guard, BPDU Filter, and ErrDisable.md>)
-- [Root Guard - Root Bridge Protection](<Root Guard - Root Bridge Protection.md>)
-- [Loop Guard - Unidirectional Link Protection](<Loop Guard - Unidirectional Link Protection.md>)
+- [[STP Part 1 - Redundancy, Root Bridge, and Port Roles]]
+- [[STP Part 2 - Port States, Timers, Toolkit, and Configuration]]
+- [[PortFast - Edge Ports and Configuration]]
+- [[BPDU Guard, BPDU Filter, and ErrDisable]]
+- [[Root Guard - Root Bridge Protection]]
+- [[Loop Guard - Unidirectional Link Protection]]
