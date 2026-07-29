@@ -30,7 +30,9 @@ The LaunchAgent runs nightly at 8:00 PM local time. macOS coalesces a missed cal
 
 The separate Obsidian generator can publish selected study notes and GitHub-friendly progress pages without changing the vault itself.
 
-Vault notes under `Notes/` are published directly beneath `notes/`. The Anki, Packet Tracer, and Udemy dashboards are published beneath `progress/`, while the vault's lab status note generates the combined checklist and download index at `labs/README.md`.
+Vault notes under `Notes/` are published directly beneath `notes/`. The Anki, Packet Tracer, and Udemy dashboards are published beneath `progress/`, and `progress/README.md` is regenerated as their public landing page. The vault's lab status note generates the combined checklist and download index at `labs/README.md`.
+
+The export removes vault-only YAML metadata from public dashboards and refreshes the repository README's current topic, Packet Tracer completion count, snapshot date, and recent-activity links.
 
 It excludes Obsidian internals, trash, local tracker state, and Packet Tracer binaries. Add this frontmatter to any Markdown note that should stay private:
 
@@ -47,3 +49,13 @@ python3 automation/sync_obsidian.py --vault "$HOME/Documents/CCNA" --check
 ```
 
 The previous Obsidian LaunchAgent is not used for the nightly Anki sync because macOS denied its background process access to the checkout under `Documents`.
+
+## Automated tests
+
+The `.github/workflows/portfolio-tests.yml` workflow runs the complete Python test suite when automation files change in a pull request or on `main`. It uses read-only repository permissions and can also be started manually from the Actions tab.
+
+Run the same checks locally:
+
+```bash
+python3 -m unittest discover -s automation -p "test_*.py" -v
+```
