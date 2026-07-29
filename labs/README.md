@@ -13,6 +13,8 @@ This is the single public checklist and download index for the Cisco Packet Trac
 
 See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study time and recent activity.
 
+After completing a lab, use the [lab reflection template](REFLECTION_TEMPLATE.md) to record what you configured, how you verified it, and what you learned.
+
 ## Lab inventory
 
 | Day | Lab | Status | File |
