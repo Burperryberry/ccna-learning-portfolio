@@ -16,7 +16,7 @@ Packet Tracer is closed
 |---:|---:|---:|---:|
 | 1h 8m | 3h 44m | 18/20 | 6/20 |
 
-Completion is manual because `.pkt` files do not publish a dependable score. Use the [completion checklist](<lab-status.md>) when a lab is done.
+Completion is manual because `.pkt` files do not publish a dependable score. Use the [lab checklist and downloads](<../labs/README.md>) when a lab is done.
 
 
 > [!note] Off-device time
