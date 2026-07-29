@@ -16,7 +16,7 @@ from urllib.parse import quote
 EXCLUDED_PARTS = {".obsidian", ".trash", ".git", ".anki-sync", ".packet-tracer-tracker"}
 PROGRESS_SOURCES = {
     Path("Anki Progress/Anki Progress Dashboard.md"): Path("progress/anki.md"),
-    Path("Packet Tracer Progress/Lab Status.md"): Path("progress/lab-status.md"),
+    Path("Packet Tracer Progress/Lab Status.md"): Path("labs/README.md"),
     Path("Packet Tracer Progress/Packet Tracer Dashboard.md"): Path("progress/packet-tracer.md"),
     Path("Udemy Progress/Udemy Progress Dashboard.md"): Path("progress/udemy.md"),
 }
@@ -103,10 +103,85 @@ def notes_friendly(relative_source: Path, text: str) -> str:
     return github_friendly(text, render_link)
 
 
+def lab_readme(text: str) -> str:
+    """Turn the vault's lab checklist into the public lab index."""
+    pattern = re.compile(
+        r"(?m)^- \[(?P<done>[ xX])\] "
+        r"\[\[Packet Tracer Progress/Labs/(?P<file>[^|\]]+)"
+        r"(?:\|(?P<label>[^\]]+))?\]\]$"
+    )
+    labs = []
+    for match in pattern.finditer(text):
+        filename = match.group("file")
+        label = match.group("label") or Path(filename).stem
+        day_match = re.match(r"Day\s+(\d+)\s+Lab\s+-\s+(.+)", label)
+        if day_match is None:
+            raise RuntimeError(f"Unrecognized Packet Tracer lab label: {label}")
+        labs.append(
+            {
+                "day": int(day_match.group(1)),
+                "name": day_match.group(2),
+                "filename": filename,
+                "complete": match.group("done").lower() == "x",
+            }
+        )
+
+    if not labs:
+        raise RuntimeError("No Packet Tracer labs were found in the lab status note")
+
+    complete = sum(lab["complete"] for lab in labs)
+    ready = len(labs) - complete
+    rows = [
+        f"| {lab['day']} | {lab['name']} | {'Complete' if lab['complete'] else 'Ready'} "
+        f"| [Open](<{lab['filename']}>) |"
+        for lab in labs
+    ]
+    return "\n".join(
+        [
+            "# Packet Tracer Labs",
+            "",
+            "This is the single public checklist and download index for the Cisco Packet Tracer "
+            "labs tracked in the CCNA learning portfolio.",
+            "",
+            "## Current snapshot",
+            "",
+            "| Metric | Current |",
+            "|---|---:|",
+            f"| Tracked labs | **{len(labs)}** |",
+            f"| Complete | **{complete}** |",
+            f"| Ready to complete | **{ready}** |",
+            f"| Lab files available in this folder | **{len(labs)} of {len(labs)}** |",
+            "",
+            "See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study "
+            "time and recent activity.",
+            "",
+            "## Lab inventory",
+            "",
+            "| Day | Lab | Status | File |",
+            "|---:|---|---|---|",
+            *rows,
+            "",
+            "Packet Tracer files are binary. Download a file and open it with Cisco Packet Tracer "
+            "to inspect or continue the lab. Completion is tracked manually because Packet Tracer "
+            "files do not provide a dependable completion score.",
+            "",
+        ]
+    )
+
+
 def progress_friendly(relative_source: Path, text: str) -> str:
     """Remove local operating instructions that do not belong in the public portfolio."""
+    if relative_source == Path("Packet Tracer Progress/Lab Status.md"):
+        return lab_readme(text)
     if relative_source == Path("Anki Progress/Anki Progress Dashboard.md"):
         text = text.split("\n## How to use this dashboard", 1)[0].rstrip() + "\n"
+    if relative_source == Path("Packet Tracer Progress/Packet Tracer Dashboard.md"):
+        text = re.sub(
+            r"\[\[Packet Tracer Progress/Lab Status(?:\|([^\]]+))?\]\]",
+            lambda match: f"[{match.group(1) or 'lab checklist and downloads'}]"
+            "(<../labs/README.md>)",
+            text,
+        )
     if relative_source == Path("Udemy Progress/Udemy Progress Dashboard.md"):
         text = text.split("\n## How to update this dashboard", 1)[0].rstrip() + "\n"
     return github_friendly(text)
@@ -141,6 +216,12 @@ def scan_for_secrets(outputs: dict[Path, str]) -> None:
     if findings:
         joined = "\n  - ".join(findings)
         raise RuntimeError(f"Refusing to publish possible secrets:\n  - {joined}")
+
+
+def artifact_label(source: Path, destination: Path) -> str:
+    if destination == Path("labs/README.md"):
+        return "Packet Tracer Labs"
+    return source.stem
 
 
 def activity_markdown(items: list[tuple[Path, Path]]) -> str:
@@ -193,8 +274,8 @@ def activity_markdown(items: list[tuple[Path, Path]]) -> str:
     rows = []
     for source, destination in ordered:
         changed = datetime.fromtimestamp(source.stat().st_mtime).astimezone().strftime("%Y-%m-%d %H:%M %Z")
-        area = source.parent.name
-        label = source.stem
+        area = "Packet Tracer Labs" if destination == Path("labs/README.md") else source.parent.name
+        label = artifact_label(source, destination)
         href = quote(destination.as_posix(), safe="/")
         rows.append(f"| {changed} | {area} | [{label}]({href}) |")
 
@@ -241,7 +322,7 @@ def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
     recent_lines = []
     for source, destination in ordered[:5]:
         href = quote(destination.as_posix(), safe="/")
-        recent_lines.append(f"- [{source.stem}]({href})")
+        recent_lines.append(f"- [{artifact_label(source, destination)}]({href})")
 
     block = "\n".join(
         [
@@ -333,7 +414,7 @@ def sync(vault: Path, repo: Path, check: bool) -> int:
             destination.write_text(content, encoding="utf-8")
 
     for relative in sorted(stale):
-        if relative.parts[0] not in {"notes", "progress"}:
+        if relative.parts[0] not in {"labs", "notes", "progress"}:
             raise RuntimeError(f"Refusing to delete unexpected managed path: {relative}")
         destination = repo / relative
         if destination.exists():

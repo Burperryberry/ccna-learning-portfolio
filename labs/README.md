@@ -1,6 +1,6 @@
 # Packet Tracer Labs
 
-This folder contains the Cisco Packet Tracer lab files tracked in the CCNA learning portfolio.
+This is the single public checklist and download index for the Cisco Packet Tracer labs tracked in the CCNA learning portfolio.
 
 ## Current snapshot
 
@@ -10,9 +10,8 @@ This folder contains the Cisco Packet Tracer lab files tracked in the CCNA learn
 | Complete | **18** |
 | Ready to complete | **2** |
 | Lab files available in this folder | **20 of 20** |
-| Dashboard synchronized | **2026-07-29 09:35 AM EDT** |
 
-See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study time and recent activity, or use the [completion checklist](../progress/lab-status.md) for the current completion state.
+See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study time and recent activity.
 
 ## Lab inventory
 
@@ -23,13 +22,13 @@ See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for stu
 | 8 | IPv4 Addresses | Complete | [Open](<Day 08 Lab - IPv4 Addresses.pkt>) |
 | 9 | Interface Configuration | Complete | [Open](<Day 09 Lab - Interface Configuration.pkt>) |
 | 11 | Configuring Static Routes | Complete | [Open](<Day 11 Lab - Configuring Static Routes.pkt>) |
-| 11 | Configuring Static Routes (second version) | Complete | [Open](<Day 11 Lab - Configuring Static Routes-2.pkt>) |
+| 11 | Configuring Static Routes-2 | Complete | [Open](<Day 11 Lab - Configuring Static Routes-2.pkt>) |
 | 11 | Troubleshooting Static Routes | Complete | [Open](<Day 11 Lab - Troubleshooting Static Routes.pkt>) |
 | 12 | Life of a Packet | Complete | [Open](<Day 12 Lab - Life of a Packet.pkt>) |
 | 16 | VLANs (Part 1) | Complete | [Open](<Day 16 Lab - VLANs (Part 1).pkt>) |
 | 17 | VLANs (Part 2) | Complete | [Open](<Day 17 Lab - VLANs (Part 2).pkt>) |
 | 18 | VLANs (Part 3) | Complete | [Open](<Day 18 Lab - VLANs (Part 3).pkt>) |
-| 19 | DTP and VTP | Complete | [Open](<Day 19 Lab - DTP & VTP.pkt>) |
+| 19 | DTP & VTP | Complete | [Open](<Day 19 Lab - DTP & VTP.pkt>) |
 | 20 | Analyzing STP | Complete | [Open](<Day 20 Lab - Analyzing STP.pkt>) |
 | 21 | Configuring Spanning Tree | Complete | [Open](<Day 21 Lab - Configuring Spanning Tree.pkt>) |
 | 22 | Rapid STP | Complete | [Open](<Day 22 Lab - Rapid STP.pkt>) |

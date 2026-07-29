@@ -36,7 +36,6 @@ The individual dashboards remain the source of truth because study statistics ch
 |---|---|---|
 | 2026-07-29 | Packet Tracer Labs | [Complete 20-file lab inventory](labs/README.md) |
 | 2026-07-29 09:35 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-07-29 09:35 EDT | Packet Tracer Progress | [Lab Status](progress/lab-status.md) |
 | 2026-07-29 09:11 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
 | 2026-07-28 17:25 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
 | 2026-07-28 16:04 EDT | OSPF | [OSPF Part 2 — Cost, Neighbors, and Adjacencies](<notes/OSPF/OSPF Part 2 - Cost, Neighbors, and Adjacencies.md>) |

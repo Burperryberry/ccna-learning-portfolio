@@ -70,6 +70,43 @@ class SyncObsidianTests(unittest.TestCase):
         self.assertIn("33% complete", published.read_text())
         self.assertNotIn("Local steps", published.read_text())
 
+    def test_lab_status_becomes_the_labs_readme(self):
+        self.write_note(
+            "Packet Tracer Progress/Lab Status.md",
+            "# Lab Status\n\n"
+            "- [x] [[Packet Tracer Progress/Labs/Day 01 Lab - Introduction.pkt"
+            "|Day 01 Lab - Introduction]]\n"
+            "- [ ] [[Packet Tracer Progress/Labs/Day 02 Lab - Switching.pkt"
+            "|Day 02 Lab - Switching]]\n",
+        )
+        (self.repo / "progress").mkdir()
+        (self.repo / "progress/lab-status.md").write_text("old duplicate\n", encoding="utf-8")
+        (self.repo / sync_obsidian.MANIFEST).write_text(
+            '{"managed_files": ["progress/lab-status.md"]}\n',
+            encoding="utf-8",
+        )
+
+        sync_obsidian.sync(self.vault, self.repo, check=False)
+
+        published = self.repo / "labs/README.md"
+        self.assertTrue(published.exists())
+        self.assertIn("| Tracked labs | **2** |", published.read_text())
+        self.assertIn("| Complete | **1** |", published.read_text())
+        self.assertIn("| 2 | Switching | Ready |", published.read_text())
+        self.assertFalse((self.repo / "progress/lab-status.md").exists())
+        manifest = (self.repo / sync_obsidian.MANIFEST).read_text()
+        self.assertIn('"labs/README.md"', manifest)
+        self.assertNotIn('"progress/lab-status.md"', manifest)
+
+    def test_packet_dashboard_links_to_combined_lab_index(self):
+        self.write_note(
+            "Packet Tracer Progress/Packet Tracer Dashboard.md",
+            "Use the [[Packet Tracer Progress/Lab Status|completion checklist]].\n",
+        )
+        sync_obsidian.sync(self.vault, self.repo, check=False)
+        published = (self.repo / "progress/packet-tracer.md").read_text()
+        self.assertIn("[completion checklist](<../labs/README.md>)", published)
+
     def test_publish_false_is_private(self):
         self.write_note("Private.md", "---\npublish: false\n---\n# Private\n")
         self.write_note("Public.md", "# Public\n")
