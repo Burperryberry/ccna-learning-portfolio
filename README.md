@@ -5,7 +5,7 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** OSPF
+- **Current topic:** Day 28 — OSPF Part 3
 - **Packet Tracer labs:** 18 of 20 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
 - **Snapshot date:** July 29, 2026
@@ -19,7 +19,7 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 - [Anki Progress Dashboard](progress/anki.md)
 - [RIP & EIGRP - Configuration and Concepts](notes/RIP%20%26%20EIGRP/RIP%20%26%20EIGRP%20-%20Configuration%20and%20Concepts.md)
 
-See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).
+See [the complete activity log](ACTIVITY.md) and the [progress dashboard index](progress/README.md).
 <!-- OBSIDIAN_SYNC:END -->
 
 ## Portfolio sections
