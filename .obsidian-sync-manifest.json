@@ -1,6 +1,7 @@
 {
   "managed_files": [
     "ACTIVITY.md",
+    "labs/README.md",
     "notes/DTP & VTP/DTP & VTP - Slide Summary.md",
     "notes/Dynamic Routing/Dynamic Routing - Fundamentals.md",
     "notes/EtherChannel/EtherChannel - Link Aggregation.md",
@@ -17,7 +18,6 @@
     "notes/VLANs/VLANs Part 2 - Trunks, 802.1Q, and ROAS.md",
     "notes/VLANs/VLANs Part 3 - Native VLANs, Multilayer Switching, and SVIs.md",
     "progress/anki.md",
-    "progress/lab-status.md",
     "progress/packet-tracer.md",
     "progress/udemy.md"
   ]
