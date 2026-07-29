@@ -677,6 +677,6 @@ show ip route
 
 ## Related notes
 
-- [Dynamic Routing - Fundamentals](<Dynamic Routing - Fundamentals.md>)
-- [Static Routing](<Static Routing.md>)
-- [EtherChannel - Link Aggregation](<EtherChannel - Link Aggregation.md>)
+- [[Dynamic Routing - Fundamentals]]
+- [[Static Routing]]
+- [[EtherChannel - Link Aggregation]]
