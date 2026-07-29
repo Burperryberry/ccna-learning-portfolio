@@ -19,7 +19,7 @@ date: 2026-07-28
 OSPF selects paths by **cost**, forms neighbor relationships with Hello packets, synchronizes Link State Databases (LSDBs), and then maintains the adjacency. For the CCNA, know the cost formula, the neighbor-state order, the five OSPF packet types, the default Ethernet Hello/Dead timers, and the commands used to tune cost and activate OSPF directly on an interface.
 
 > [!tip] Part 1 connection
-> Review [[OSPF Part 1 - Fundamentals, Areas, and Basic Configuration]] for OSPF areas, router ID selection, `network` statements, passive interfaces, default-route advertisement, and verification fundamentals.
+> Review [OSPF Part 1 - Fundamentals, Areas, and Basic Configuration](<OSPF Part 1 - Fundamentals, Areas, and Basic Configuration.md>) for OSPF areas, router ID selection, `network` statements, passive interfaces, default-route advertisement, and verification fundamentals.
 
 ## OSPF cost
 
@@ -279,6 +279,6 @@ Check for:
 
 ## Related notes
 
-- [[OSPF Part 1 - Fundamentals, Areas, and Basic Configuration]]
-- [[Dynamic Routing - Fundamentals]]
-- [[EIGRP Terminology and Unequal-Cost Load Balancing]]
+- [OSPF Part 1 - Fundamentals, Areas, and Basic Configuration](<OSPF Part 1 - Fundamentals, Areas, and Basic Configuration.md>)
+- [Dynamic Routing - Fundamentals](<../Dynamic Routing/Dynamic Routing - Fundamentals.md>)
+- [EIGRP Terminology and Unequal-Cost Load Balancing](<../RIP & EIGRP/EIGRP Terminology and Unequal-Cost Load Balancing.md>)
