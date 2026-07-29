@@ -229,7 +229,7 @@ PortFast is one part of the broader STP toolkit:
 
 ## Related notes
 
-- [[STP Part 2 - Port States, Timers, Toolkit, and Configuration]]
-- [[STP Part 2 - Quiz Review]]
-- [[STP Part 1 - Redundancy, Root Bridge, and Port Roles]]
-- [[VLANs Part 2 - Trunks, 802.1Q, and ROAS]]
+- [STP Part 2 - Port States, Timers, Toolkit, and Configuration](<STP Part 2 - Port States, Timers, Toolkit, and Configuration.md>)
+- STP Part 2 - Quiz Review
+- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](<../STP Part 1 - Redundancy, Root Bridge, and Port Roles.md>)
+- [VLANs Part 2 - Trunks, 802.1Q, and ROAS](<../../VLANs/VLANs Part 2 - Trunks, 802.1Q, and ROAS.md>)
