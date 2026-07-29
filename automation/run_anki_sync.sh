@@ -41,7 +41,7 @@ fi
   --collection "$collection" \
   --repo "$repo_dir"
 
-git add -- progress/anki.md "flashcard-progress/Anki Progress Dashboard.md"
+git add -- progress/anki.md
 if ! git diff --cached --quiet; then
   git commit -m "Sync Anki progress $(date +%F)"
 else
@@ -63,7 +63,7 @@ if ! git diff --quiet origin/main...HEAD; then
     printf '%s\n' \
       '## What changed' \
       '' \
-      '- Refreshed the public CCNA Anki progress dashboards.' \
+      '- Refreshed the public CCNA Anki progress dashboard.' \
       '- Added aggregate workload, review activity, streak, and weak-topic metrics.' \
       '' \
       '## Privacy' \

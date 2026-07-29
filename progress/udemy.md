@@ -19,7 +19,7 @@ cssclasses: [udemy-progress-dashboard]
 > [!tip] Continue studying
 > **Day 28 · OSPF (part 3)** — [Continue Day 28 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
 >
-> Related material: [[Packet Tracer Progress/Packet Tracer Dashboard|Packet Tracer Progress]]
+> Related material: [Packet Tracer Progress](<packet-tracer.md>)
 
 ## Finish queue
 
@@ -103,4 +103,4 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 - Complete videos normally in Udemy; do not maintain a duplicate checklist here.
 - When you want a fresh snapshot, sign into Udemy in the Codex in-app browser and ask: **Sync my Udemy CCNA progress.**
 - Use the finish queue to catch isolated incomplete labs or lectures before moving too far ahead.
-- Keep learning notes in `Notes/` and lab completion in [[Packet Tracer Progress/Packet Tracer Dashboard|Packet Tracer Progress]].
+- Keep learning notes in `Notes/` and lab completion in [Packet Tracer Progress](<packet-tracer.md>).

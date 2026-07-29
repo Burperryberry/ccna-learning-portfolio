@@ -22,11 +22,11 @@ date: 2026-07-21
 
 ## Original slides
 
-![[Day 21 Slides - STP Part 2.pdf]]
+*Day 21 Slides - STP Part 2.pdf*
 
 ## How Part 2 fits with Part 1
 
-[[STP Part 1 - Redundancy, Root Bridge, and Port Roles|Part 1]] explains how STP elects the root bridge and assigns root, designated, and non-designated port roles. Part 2 explains what those ports do after their roles are selected, how long convergence can take, and how to configure the behavior.
+[Part 1](<../STP Part 1 - Redundancy, Root Bridge, and Port Roles.md>) explains how STP elects the root bridge and assigns root, designated, and non-designated port roles. Part 2 explains what those ports do after their roles are selected, how long convergence can take, and how to configure the behavior.
 
 > [!important] Protocol scope
 > The blocking, listening, learning, and forwarding sequence in this deck describes **classic STP/PVST (802.1D behavior)**. Rapid STP and Rapid PVST+ use different roles and faster transition mechanisms.
@@ -299,7 +299,7 @@ Check:
 
 ## Related notes
 
-- [[STP Part 1 - Redundancy, Root Bridge, and Port Roles]]
-- [[STP Part 2 - Quiz Review]]
-- [[VLANs Part 2 - Trunks, 802.1Q, and ROAS]]
-- [[DTP & VTP - Slide Summary]]
+- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](<../STP Part 1 - Redundancy, Root Bridge, and Port Roles.md>)
+- STP Part 2 - Quiz Review
+- [VLANs Part 2 - Trunks, 802.1Q, and ROAS](<../../VLANs/VLANs Part 2 - Trunks, 802.1Q, and ROAS.md>)
+- [DTP & VTP - Slide Summary](<../../DTP & VTP/DTP & VTP - Slide Summary.md>)

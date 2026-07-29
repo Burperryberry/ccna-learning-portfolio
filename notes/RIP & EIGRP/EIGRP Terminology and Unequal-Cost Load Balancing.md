@@ -442,5 +442,5 @@ unequal-cost load balancing.
 
 ## Related notes
 
-- [[RIP & EIGRP - Configuration and Concepts]]
-- [[Dynamic Routing - Fundamentals]]
+- [RIP & EIGRP - Configuration and Concepts](<RIP & EIGRP - Configuration and Concepts.md>)
+- [Dynamic Routing - Fundamentals](<../Dynamic Routing/Dynamic Routing - Fundamentals.md>)

@@ -29,7 +29,6 @@ See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progr
 | [`labs/`](labs/) | Packet Tracer `.pkt` files and the lab completion snapshot |
 | [`notes/`](notes/) | Topic notes covering VLANs, trunking, DTP/VTP, and spanning tree |
 | [`progress/`](progress/) | Current Anki, Packet Tracer, lab, and Udemy dashboards |
-| [`flashcard-progress/`](flashcard-progress/) | Anki workload, review activity, retention, and weak-topic dashboard |
 
 ## Repository structure
 
@@ -37,8 +36,7 @@ See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progr
 ccna-learning-portfolio/
 ├── labs/
 ├── notes/
-├── progress/
-└── flashcard-progress/
+└── progress/
 ```
 
 ## Skills in development
