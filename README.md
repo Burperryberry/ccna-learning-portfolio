@@ -5,16 +5,16 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** RIP & EIGRP
-- **Packet Tracer labs:** 15 of 15 marked complete
+- **Current topic:** OSPF
+- **Packet Tracer labs:** 18 of 20 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
-- **Snapshot date:** July 23, 2026
+- **Snapshot date:** July 29, 2026
 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
 
 - [Packet Tracer Dashboard](progress/packet-tracer.md)
-- [Lab Status](progress/lab-status.md)
+- [Packet Tracer Labs](labs/README.md)
 - [Udemy Progress Dashboard](progress/udemy.md)
 - [Anki Progress Dashboard](progress/anki.md)
 - [RIP & EIGRP - Configuration and Concepts](notes/RIP%20%26%20EIGRP/RIP%20%26%20EIGRP%20-%20Configuration%20and%20Concepts.md)
@@ -28,7 +28,7 @@ See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progr
 |---|---|
 | [`labs/`](labs/) | Packet Tracer `.pkt` files and the lab completion snapshot |
 | [`notes/`](notes/) | Topic notes covering VLANs, trunking, DTP/VTP, and spanning tree |
-| [`progress/`](progress/) | Current Anki, Packet Tracer, lab, and Udemy dashboards |
+| [`progress/`](progress/) | Current Anki, Packet Tracer, and Udemy dashboards |
 
 ## Repository structure
 
