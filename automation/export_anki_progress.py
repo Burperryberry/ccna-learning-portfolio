@@ -20,10 +20,7 @@ DEFAULT_COLLECTION = (
     Path.home() / "Library" / "Application Support" / "Anki2" / "User 1" / "collection.anki2"
 )
 DEFAULT_HISTORY_DAYS = 365
-OUTPUT_PATHS = (
-    Path("progress") / "anki.md",
-    Path("flashcard-progress") / "Anki Progress Dashboard.md",
-)
+OUTPUT_PATHS = (Path("progress") / "anki.md",)
 
 
 def _source_signature(collection: Path) -> tuple[tuple[str, int, int], ...]:
