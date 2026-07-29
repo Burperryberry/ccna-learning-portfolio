@@ -4,10 +4,7 @@ This repository includes separate workflows for publishing Anki progress and sel
 
 ## Nightly Anki progress sync
 
-`automation/export_anki_progress.py` reads a stable temporary snapshot of the local Anki collection and generates both public dashboards:
-
-- `progress/anki.md`
-- `flashcard-progress/Anki Progress Dashboard.md`
+`automation/export_anki_progress.py` reads a stable temporary snapshot of the local Anki collection and generates the public dashboard at `progress/anki.md`
 
 Only aggregate statistics are exported: workload counts, review totals, study time, answer-button success rates, streaks, and deck-level weak-topic signals. Card questions, answers, note fields, and raw review history are never written to the repository. The live Anki database is opened only through a copied SQLite/WAL snapshot and is never modified.
 
