@@ -280,8 +280,8 @@ flowchart TD
 
 ## Related notes
 
-- [Root Guard - Root Bridge Protection](<Root Guard - Root Bridge Protection.md>)
-- [BPDU Guard, BPDU Filter, and ErrDisable](<BPDU Guard, BPDU Filter, and ErrDisable.md>)
-- [PortFast - Edge Ports and Configuration](<PortFast - Edge Ports and Configuration.md>)
-- [STP Part 2 - Port States, Timers, Toolkit, and Configuration](<STP Part 2 - Port States, Timers, Toolkit, and Configuration.md>)
-- [STP Part 1 - Redundancy, Root Bridge, and Port Roles](<STP Part 1 - Redundancy, Root Bridge, and Port Roles.md>)
+- [[Root Guard - Root Bridge Protection]]
+- [[BPDU Guard, BPDU Filter, and ErrDisable]]
+- [[PortFast - Edge Ports and Configuration]]
+- [[STP Part 2 - Port States, Timers, Toolkit, and Configuration]]
+- [[STP Part 1 - Redundancy, Root Bridge, and Port Roles]]
