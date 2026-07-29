@@ -30,7 +30,7 @@ The LaunchAgent runs nightly at 8:00 PM local time. macOS coalesces a missed cal
 
 The separate Obsidian generator can publish selected study notes and GitHub-friendly progress pages without changing the vault itself.
 
-Vault notes under `Notes/` are published directly beneath `notes/`, and the Anki, Packet Tracer, and Udemy dashboards are published beneath `progress/`.
+Vault notes under `Notes/` are published directly beneath `notes/`. The Anki, Packet Tracer, and Udemy dashboards are published beneath `progress/`, while the vault's lab status note generates the combined checklist and download index at `labs/README.md`.
 
 It excludes Obsidian internals, trash, local tracker state, and Packet Tracer binaries. Add this frontmatter to any Markdown note that should stay private:
 
