@@ -51,6 +51,16 @@ def opted_out(text: str) -> bool:
     return bool(re.search(r"(?mi)^publish\s*:\s*(?:false|no|off)\s*$", frontmatter))
 
 
+def strip_frontmatter(text: str) -> str:
+    """Remove vault-only YAML metadata from a public GitHub page."""
+    if not text.startswith("---\n"):
+        return text
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return text
+    return text[end + 5 :].lstrip("\n")
+
+
 def github_friendly(text: str, link_renderer=None) -> str:
     """Replace Obsidian-only links with readable labels without exposing local paths."""
 
@@ -155,6 +165,9 @@ def lab_readme(text: str) -> str:
             "See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study "
             "time and recent activity.",
             "",
+            "After completing a lab, use the [lab reflection template](REFLECTION_TEMPLATE.md) "
+            "to record what you configured, how you verified it, and what you learned.",
+            "",
             "## Lab inventory",
             "",
             "| Day | Lab | Status | File |",
@@ -173,6 +186,7 @@ def progress_friendly(relative_source: Path, text: str) -> str:
     """Remove local operating instructions that do not belong in the public portfolio."""
     if relative_source == Path("Packet Tracer Progress/Lab Status.md"):
         return lab_readme(text)
+    text = strip_frontmatter(text)
     if relative_source == Path("Anki Progress/Anki Progress Dashboard.md"):
         text = text.split("\n## How to use this dashboard", 1)[0].rstrip() + "\n"
     if relative_source == Path("Packet Tracer Progress/Packet Tracer Dashboard.md"):
@@ -185,6 +199,23 @@ def progress_friendly(relative_source: Path, text: str) -> str:
     if relative_source == Path("Udemy Progress/Udemy Progress Dashboard.md"):
         text = text.split("\n## How to update this dashboard", 1)[0].rstrip() + "\n"
     return github_friendly(text)
+
+
+def progress_readme() -> str:
+    return """# CCNA Progress Dashboards
+
+This folder contains the public progress snapshots generated from the CCNA study system.
+
+| Dashboard | What it tracks |
+|---|---|
+| [Anki](anki.md) | Card workload, reviews, study time, and weak-topic signals |
+| [Packet Tracer](packet-tracer.md) | Lab completion, tracked practice time, and recent activity |
+| [Udemy](udemy.md) | Course position, completed videos, and section progress |
+
+The [Packet Tracer lab index](../labs/README.md) is the single checklist and download page for lab files.
+
+These pages are generated from local dashboards. Their “Last synchronized” timestamps show when each source was most recently published.
+"""
 
 
 def published_note_path(relative_source: Path) -> Path:
@@ -314,10 +345,46 @@ def activity_markdown(items: list[tuple[Path, Path]]) -> str:
 def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
     ordered = sorted(items, key=lambda item: item[0].stat().st_mtime, reverse=True)
     content_items = [item for item in ordered if item[1].parts[0] == "notes"]
-    if content_items:
-        current_topic = content_items[0][0].parent.name
+    sources = {destination: source for source, destination in ordered}
+
+    udemy_source = sources.get(Path("progress/udemy.md"))
+    udemy_text = udemy_source.read_text(encoding="utf-8") if udemy_source else ""
+    topic_match = re.search(r">\s*\*\*(Day [^*]+)\*\*", udemy_text)
+    current_topic = topic_match.group(1) if topic_match else (
+        content_items[0][0].parent.name if content_items else None
+    )
+    if current_topic:
         topic_pattern = re.compile(r"(?m)^(?P<prefix>\s*(?:-\s*)?\*\*Current topic:\*\*)[^\n]*$")
         readme = topic_pattern.sub(lambda match: f"{match.group('prefix')} {current_topic}", readme)
+
+    packet_source = sources.get(Path("progress/packet-tracer.md"))
+    packet_text = packet_source.read_text(encoding="utf-8") if packet_source else ""
+    packet_match = re.search(
+        r"\|\s*[^|\n]+\|\s*[^|\n]+\|\s*(\d+)\s*/\s*(\d+)\s*\|\s*[^|\n]+\|",
+        packet_text,
+    )
+    if packet_match:
+        lab_pattern = re.compile(
+            r"(?m)^(?P<prefix>\s*(?:-\s*)?\*\*Packet Tracer labs:\*\*)[^\n]*$"
+        )
+        readme = lab_pattern.sub(
+            lambda match: (
+                f"{match.group('prefix')} {packet_match.group(1)} of "
+                f"{packet_match.group(2)} marked complete"
+            ),
+            readme,
+        )
+
+    if ordered:
+        newest = datetime.fromtimestamp(ordered[0][0].stat().st_mtime).astimezone()
+        snapshot_date = f"{newest.strftime('%B')} {newest.day}, {newest.year}"
+        date_pattern = re.compile(
+            r"(?m)^(?P<prefix>\s*(?:-\s*)?\*\*Snapshot date:\*\*)[^\n]*$"
+        )
+        readme = date_pattern.sub(
+            lambda match: f"{match.group('prefix')} {snapshot_date}",
+            readme,
+        )
 
     recent_lines = []
     for source, destination in ordered[:5]:
@@ -331,7 +398,8 @@ def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
             "",
             *recent_lines,
             "",
-            "See [the complete activity log](ACTIVITY.md) and the [progress dashboards](progress/).",
+            "See [the complete activity log](ACTIVITY.md) and the "
+            "[progress dashboard index](progress/README.md).",
             README_END,
         ]
     )
@@ -373,6 +441,7 @@ def build_outputs(vault: Path, repo: Path) -> tuple[dict[Path, str], list[tuple[
     if not activity_items:
         raise RuntimeError("No publishable Markdown files were found in the vault")
 
+    outputs[Path("progress/README.md")] = progress_readme()
     outputs[Path("ACTIVITY.md")] = activity_markdown(activity_items)
     readme_path = repo / "README.md"
     if not readme_path.exists():

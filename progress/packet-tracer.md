@@ -1,8 +1,3 @@
----
-tags: [ccna, packet-tracer, labs, progress]
-cssclasses: [packet-tracer-progress-dashboard]
----
-
 # Packet Tracer Progress
 
 > [!info] Last synchronized

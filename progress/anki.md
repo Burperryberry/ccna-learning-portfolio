@@ -1,13 +1,3 @@
----
-tags:
-  - ccna
-  - anki
-  - flashcards
-  - progress
-cssclasses:
-  - anki-progress-dashboard
----
-
 # Anki CCNA Progress
 
 > [!info] Last synchronized

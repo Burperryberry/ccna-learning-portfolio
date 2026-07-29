@@ -1,8 +1,3 @@
----
-tags: [ccna, udemy, videos, progress]
-cssclasses: [udemy-progress-dashboard]
----
-
 # Udemy CCNA Progress
 
 > [!info] Last synchronized
