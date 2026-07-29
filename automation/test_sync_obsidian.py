@@ -22,7 +22,11 @@ class SyncObsidianTests(unittest.TestCase):
         (self.vault / ".obsidian").mkdir(parents=True)
         (self.repo / ".git").mkdir(parents=True)
         (self.repo / "README.md").write_text(
-            "# Portfolio\n\n## Current snapshot\n\n- **Current topic:** Old\n\n## Portfolio sections\n",
+            "# Portfolio\n\n## Current snapshot\n\n"
+            "- **Current topic:** Old\n"
+            "- **Packet Tracer labs:** 0 of 0 marked complete\n"
+            "- **Snapshot date:** January 1, 2000\n\n"
+            "## Portfolio sections\n",
             encoding="utf-8",
         )
 
@@ -62,13 +66,17 @@ class SyncObsidianTests(unittest.TestCase):
     def test_udemy_dashboard_publishes_as_progress(self):
         self.write_note(
             "Udemy Progress/Udemy Progress Dashboard.md",
-            "# Udemy Progress\n\n33% complete.\n\n## How to update this dashboard\n\nLocal steps.\n",
+            "---\ntags: [ccna, progress]\ncssclasses: [local-dashboard]\n---\n\n"
+            "# Udemy Progress\n\n33% complete.\n\n"
+            "## How to update this dashboard\n\nLocal steps.\n",
         )
         sync_obsidian.sync(self.vault, self.repo, check=False)
         published = self.repo / "progress/udemy.md"
         self.assertTrue(published.exists())
         self.assertIn("33% complete", published.read_text())
         self.assertNotIn("Local steps", published.read_text())
+        self.assertNotIn("cssclasses", published.read_text())
+        self.assertNotIn("tags:", published.read_text())
 
     def test_lab_status_becomes_the_labs_readme(self):
         self.write_note(
@@ -93,6 +101,7 @@ class SyncObsidianTests(unittest.TestCase):
         self.assertIn("| Tracked labs | **2** |", published.read_text())
         self.assertIn("| Complete | **1** |", published.read_text())
         self.assertIn("| 2 | Switching | Ready |", published.read_text())
+        self.assertIn("[lab reflection template](REFLECTION_TEMPLATE.md)", published.read_text())
         self.assertFalse((self.repo / "progress/lab-status.md").exists())
         manifest = (self.repo / sync_obsidian.MANIFEST).read_text()
         self.assertIn('"labs/README.md"', manifest)
@@ -101,11 +110,39 @@ class SyncObsidianTests(unittest.TestCase):
     def test_packet_dashboard_links_to_combined_lab_index(self):
         self.write_note(
             "Packet Tracer Progress/Packet Tracer Dashboard.md",
+            "---\ntags: [ccna, progress]\ncssclasses: [local-dashboard]\n---\n\n"
             "Use the [[Packet Tracer Progress/Lab Status|completion checklist]].\n",
         )
         sync_obsidian.sync(self.vault, self.repo, check=False)
         published = (self.repo / "progress/packet-tracer.md").read_text()
         self.assertIn("[completion checklist](<../labs/README.md>)", published)
+        self.assertNotIn("cssclasses", published)
+
+    def test_readme_snapshot_and_progress_index_are_generated(self):
+        self.write_note(
+            "Packet Tracer Progress/Packet Tracer Dashboard.md",
+            "# Packet Tracer\n\n"
+            "| Today | Total time | Completed | Started |\n"
+            "|---:|---:|---:|---:|\n"
+            "| 20 min | 3h | 18/20 | 6/20 |\n",
+        )
+        self.write_note(
+            "Udemy Progress/Udemy Progress Dashboard.md",
+            "# Udemy\n\n> **Day 28 — OSPF Part 3**\n",
+        )
+
+        sync_obsidian.sync(self.vault, self.repo, check=False)
+
+        readme = (self.repo / "README.md").read_text()
+        self.assertIn("- **Current topic:** Day 28 — OSPF Part 3", readme)
+        self.assertIn("- **Packet Tracer labs:** 18 of 20 marked complete", readme)
+        self.assertNotIn("January 1, 2000", readme)
+        self.assertIn("[progress dashboard index](progress/README.md)", readme)
+
+        progress_index = (self.repo / "progress/README.md").read_text()
+        self.assertIn("[Anki](anki.md)", progress_index)
+        self.assertIn("[Packet Tracer](packet-tracer.md)", progress_index)
+        self.assertIn("[Udemy](udemy.md)", progress_index)
 
     def test_publish_false_is_private(self):
         self.write_note("Private.md", "---\npublish: false\n---\n# Private\n")
