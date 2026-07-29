@@ -470,6 +470,6 @@ They have the same destination, prefix length, protocol, and metric, so the rout
 
 ## Related notes
 
-- [Static Routing](<Static Routing.md>)
-- [EtherChannel - Link Aggregation](<EtherChannel - Link Aggregation.md>)
-- [Rapid Spanning Tree Protocol (RSTP)](<Rapid Spanning Tree Protocol (RSTP).md>)
+- [[Static Routing]]
+- [[EtherChannel - Link Aggregation]]
+- [[Rapid Spanning Tree Protocol (RSTP)]]
