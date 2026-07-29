@@ -144,8 +144,54 @@ def scan_for_secrets(outputs: dict[Path, str]) -> None:
 
 
 def activity_markdown(items: list[tuple[Path, Path]]) -> str:
+    ordered = sorted(items, key=lambda item: item[0].stat().st_mtime, reverse=True)
+    note_items = [item for item in ordered if item[1].parts[0] == "notes"]
+    progress_sources = {destination.as_posix(): source for source, destination in ordered}
+
+    def read_progress(destination: str) -> str:
+        source = progress_sources.get(destination)
+        if source is None:
+            return ""
+        return source.read_text(encoding="utf-8")
+
+    packet_text = read_progress("progress/packet-tracer.md")
+    udemy_text = read_progress("progress/udemy.md")
+    anki_text = read_progress("progress/anki.md")
+
+    packet_match = re.search(
+        r"\|\s*[^|\n]+\|\s*[^|\n]+\|\s*(\d+\s*/\s*\d+)\s*\|\s*[^|\n]+\|",
+        packet_text,
+    )
+    udemy_match = re.search(
+        r"\|\s*\*\*(\d+)\*\*\s*\|\s*\*\*(\d+)\*\*\s*\|\s*\*\*([\d.]+%)\*\*",
+        udemy_text,
+    )
+    anki_match = re.search(
+        r"\|(?:\s*\*\*\d+\*\*\s*\|){5}\s*\*\*(\d+)\*\*\s*\|",
+        anki_text,
+    )
+    topic_match = re.search(r">\s*\*\*(Day [^*]+)\*\*", udemy_text)
+
+    summary = [f"- **Published notes:** {len(note_items)}"]
+    if topic_match:
+        summary.append(f"- **Current topic:** {topic_match.group(1)}")
+    if packet_match:
+        summary.append(f"- **Packet Tracer:** {packet_match.group(1).replace(' ', '')} labs complete")
+    if udemy_match:
+        summary.append(
+            f"- **Udemy:** {udemy_match.group(1)} of {udemy_match.group(2)} videos complete "
+            f"({udemy_match.group(3)})"
+        )
+    if anki_match:
+        summary.append(f"- **Anki:** {anki_match.group(1)} cards tracked")
+
+    recent_lines = []
+    for source, destination in note_items[:3]:
+        href = quote(destination.as_posix(), safe="/")
+        recent_lines.append(f"- [{source.stem}]({href})")
+
     rows = []
-    for source, destination in sorted(items, key=lambda item: item[0].stat().st_mtime, reverse=True):
+    for source, destination in ordered:
         changed = datetime.fromtimestamp(source.stat().st_mtime).astimezone().strftime("%Y-%m-%d %H:%M %Z")
         area = source.parent.name
         label = source.stem
@@ -156,7 +202,25 @@ def activity_markdown(items: list[tuple[Path, Path]]) -> str:
         [
             "# Recent CCNA Learning Activity",
             "",
-            "This page is generated from publishable activity in the CCNA Obsidian vault.",
+            "This page summarizes publishable study artifacts and progress from the CCNA Obsidian vault.",
+            "",
+            "## Current portfolio snapshot",
+            "",
+            *summary,
+            "",
+            "## Quick links",
+            "",
+            "- [Browse all study notes](notes/README.md)",
+            "- [Download Packet Tracer labs](labs/README.md)",
+            "- [Packet Tracer progress](progress/packet-tracer.md)",
+            "- [Anki progress](progress/anki.md)",
+            "- [Udemy progress](progress/udemy.md)",
+            "",
+            "## Latest learning",
+            "",
+            *recent_lines,
+            "",
+            "## Published activity",
             "",
             "| Last updated | Area | Artifact |",
             "|---|---|---|",

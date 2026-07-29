@@ -1,8 +1,20 @@
 # Packet Tracer Labs
 
-This folder contains the Cisco Packet Tracer lab files tracked in the CCNA Obsidian vault.
+This folder contains the Cisco Packet Tracer lab files tracked in the CCNA learning portfolio.
 
-Status snapshot: **13 of 14 labs complete** on July 22, 2026.
+## Current snapshot
+
+| Metric | Current |
+|---|---:|
+| Tracked labs | **20** |
+| Complete | **18** |
+| Ready to complete | **2** |
+| Lab files available in this folder | **20 of 20** |
+| Dashboard synchronized | **2026-07-29 09:35 AM EDT** |
+
+See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study time and recent activity, or use the [completion checklist](../progress/lab-status.md) for the current completion state.
+
+## Lab inventory
 
 | Day | Lab | Status | File |
 |---:|---|---|---|
@@ -19,6 +31,12 @@ Status snapshot: **13 of 14 labs complete** on July 22, 2026.
 | 18 | VLANs (Part 3) | Complete | [Open](<Day 18 Lab - VLANs (Part 3).pkt>) |
 | 19 | DTP and VTP | Complete | [Open](<Day 19 Lab - DTP & VTP.pkt>) |
 | 20 | Analyzing STP | Complete | [Open](<Day 20 Lab - Analyzing STP.pkt>) |
-| 21 | Configuring Spanning Tree | Ready | [Open](<Day 21 Lab - Configuring Spanning Tree.pkt>) |
+| 21 | Configuring Spanning Tree | Complete | [Open](<Day 21 Lab - Configuring Spanning Tree.pkt>) |
+| 22 | Rapid STP | Complete | [Open](<Day 22 Lab - Rapid STP.pkt>) |
+| 23 | EtherChannel | Ready | [Open](<Day 23 Lab - EtherChannel.pkt>) |
+| 24 | Floating Static Routes | Complete | [Open](<Day 24 Lab - Floating Static Routes.pkt>) |
+| 25 | EIGRP Configuration | Ready | [Open](<Day 25 Lab - EIGRP Configuration.pkt>) |
+| 26 | OSPF (Part 1) | Complete | [Open](<Day 26 Lab - OSPF (Part 1).pkt>) |
+| 27 | OSPF (Part 2) | Complete | [Open](<Day 27 Lab - OSPF (Part 2).pkt>) |
 
-Packet Tracer `.pkt` files are binary. Download a file and open it with Cisco Packet Tracer to inspect or continue the lab.
+Packet Tracer files are binary. Download a file and open it with Cisco Packet Tracer to inspect or continue the lab. Completion is tracked manually because Packet Tracer files do not provide a dependable completion score.
