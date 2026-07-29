@@ -556,7 +556,7 @@ show spanning-tree
 
 ## Related notes
 
-- [Rapid Spanning Tree Protocol (RSTP)](<Rapid Spanning Tree Protocol (RSTP).md>)
-- [STP Part 2 - Port States, Timers, Toolkit, and Configuration](<STP Part 2 - Port States, Timers, Toolkit, and Configuration.md>)
-- [VLANs Part 2 - Trunks, 802.1Q, and ROAS](<VLANs Part 2 - Trunks, 802.1Q, and ROAS.md>)
-- [DTP & VTP - Slide Summary](<DTP & VTP - Slide Summary.md>)
+- [[Rapid Spanning Tree Protocol (RSTP)]]
+- [[STP Part 2 - Port States, Timers, Toolkit, and Configuration]]
+- [[VLANs Part 2 - Trunks, 802.1Q, and ROAS]]
+- [[DTP & VTP - Slide Summary]]
