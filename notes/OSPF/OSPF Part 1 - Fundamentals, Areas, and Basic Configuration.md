@@ -277,6 +277,6 @@ R1(config-router)# distance 85
 
 ## Related notes
 
-- [[Dynamic Routing]]
-- [[RIP & EIGRP - Configuration and Concepts]]
-- [[EIGRP Terminology and Unequal-Cost Load Balancing]]
+- [Dynamic Routing](<../Dynamic Routing/Dynamic Routing - Fundamentals.md>)
+- [RIP & EIGRP - Configuration and Concepts](<../RIP & EIGRP/RIP & EIGRP - Configuration and Concepts.md>)
+- [EIGRP Terminology and Unequal-Cost Load Balancing](<../RIP & EIGRP/EIGRP Terminology and Unequal-Cost Load Balancing.md>)
