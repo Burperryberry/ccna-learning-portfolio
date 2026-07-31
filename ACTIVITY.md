@@ -1,3 +1,4 @@
+
 # Recent CCNA Learning Activity
 
 This page summarizes publishable study artifacts and progress from the CCNA Obsidian vault.
@@ -5,9 +6,9 @@ This page summarizes publishable study artifacts and progress from the CCNA Obsi
 ## Current portfolio snapshot
 
 - **Published notes:** 18
-- **Current topic:** Day 28 · OSPF (part 3)
+- **Current topic:** Day 29 · First Hop Redundancy Protocols
 - **Packet Tracer:** 20/21 labs complete
-- **Udemy:** 57 of 129 videos complete (44.2%)
+- **Udemy:** 59 of 129 videos complete (45.7%)
 - **Anki:** 707 cards tracked
 
 ## Quick links
@@ -28,11 +29,11 @@ This page summarizes publishable study artifacts and progress from the CCNA Obsi
 
 | Last updated | Area | Artifact |
 |---|---|---|
-| 2026-07-30 21:19 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-07-30 21:19 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
+| 2026-07-30 21:31 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
+| 2026-07-30 21:31 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
+| 2026-07-30 21:30 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
 | 2026-07-30 20:32 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
 | 2026-07-29 11:23 EDT | OSPF | [OSPF Part 3 - Network Types, DR and BDR, Neighbor Requirements, and LSAs](notes/OSPF/OSPF%20Part%203%20-%20Network%20Types%2C%20DR%20and%20BDR%2C%20Neighbor%20Requirements%2C%20and%20LSAs.md) |
-| 2026-07-28 17:26 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
 | 2026-07-28 16:04 EDT | OSPF | [OSPF Part 2 - Cost, Neighbors, and Adjacencies](notes/OSPF/OSPF%20Part%202%20-%20Cost%2C%20Neighbors%2C%20and%20Adjacencies.md) |
 | 2026-07-28 14:43 EDT | OSPF | [OSPF Part 1 - Fundamentals, Areas, and Basic Configuration](notes/OSPF/OSPF%20Part%201%20-%20Fundamentals%2C%20Areas%2C%20and%20Basic%20Configuration.md) |
 | 2026-07-27 18:41 EDT | RIP & EIGRP | [RIP & EIGRP - Configuration and Concepts](notes/RIP%20%26%20EIGRP/RIP%20%26%20EIGRP%20-%20Configuration%20and%20Concepts.md) |
