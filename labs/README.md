@@ -6,10 +6,10 @@ This is the single public checklist and download index for the Cisco Packet Trac
 
 | Metric | Current |
 |---|---:|
-| Tracked labs | **20** |
-| Complete | **18** |
-| Ready to complete | **2** |
-| Lab files available in this folder | **20 of 20** |
+| Tracked labs | **21** |
+| Complete | **20** |
+| Ready to complete | **1** |
+| Lab files available in this folder | **21 of 21** |
 
 See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study time and recent activity.
 
@@ -36,8 +36,9 @@ After completing a lab, use the [lab reflection template](REFLECTION_TEMPLATE.md
 | 22 | Rapid STP | Complete | [Open](<Day 22 Lab - Rapid STP.pkt>) |
 | 23 | EtherChannel | Ready | [Open](<Day 23 Lab - EtherChannel.pkt>) |
 | 24 | Floating Static Routes | Complete | [Open](<Day 24 Lab - Floating Static Routes.pkt>) |
-| 25 | EIGRP Configuration | Ready | [Open](<Day 25 Lab - EIGRP Configuration.pkt>) |
+| 25 | EIGRP Configuration | Complete | [Open](<Day 25 Lab - EIGRP Configuration.pkt>) |
 | 26 | OSPF (Part 1) | Complete | [Open](<Day 26 Lab - OSPF (Part 1).pkt>) |
 | 27 | OSPF (Part 2) | Complete | [Open](<Day 27 Lab - OSPF (Part 2).pkt>) |
+| 28 | OSPF (Part 3) | Complete | [Open](<Day 28 Lab - OSPF (Part 3).pkt>) |
 
 Packet Tracer files are binary. Download a file and open it with Cisco Packet Tracer to inspect or continue the lab. Completion is tracked manually because Packet Tracer files do not provide a dependable completion score.

@@ -80,7 +80,49 @@ def github_friendly(text: str, link_renderer=None) -> str:
     return text.rstrip() + "\n"
 
 
-def notes_friendly(relative_source: Path, text: str) -> str:
+def frontmatter_note_names(source: Path, text: str) -> set[str]:
+    """Return a note's filename, title, and YAML-list aliases."""
+    names = {source.stem}
+    if not text.startswith("---\n"):
+        return names
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return names
+
+    lines = text[4:end].splitlines()
+    collecting_aliases = False
+    for line in lines:
+        title_match = re.match(r"^title:\s*(.+?)\s*$", line)
+        if title_match:
+            names.add(title_match.group(1).strip("\"'"))
+            collecting_aliases = False
+            continue
+        aliases_match = re.match(r"^aliases:\s*(.*?)\s*$", line)
+        if aliases_match:
+            collecting_aliases = True
+            inline = aliases_match.group(1)
+            if inline.startswith("[") and inline.endswith("]"):
+                for alias in inline[1:-1].split(","):
+                    if alias.strip():
+                        names.add(alias.strip().strip("\"'"))
+                collecting_aliases = False
+            continue
+        if collecting_aliases:
+            alias_match = re.match(r"^\s+-\s+(.+?)\s*$", line)
+            if alias_match:
+                names.add(alias_match.group(1).strip("\"'"))
+                continue
+            if line and not line[0].isspace():
+                collecting_aliases = False
+    return names
+
+
+def notes_friendly(
+    relative_source: Path,
+    text: str,
+    known_targets: set[Path],
+    link_index: dict[str, list[Path]],
+) -> str:
     """Convert Obsidian note links into relative GitHub Markdown links."""
 
     def render_link(raw_target: str) -> str:
@@ -98,8 +140,20 @@ def notes_friendly(relative_source: Path, text: str) -> str:
                 target_path = Path(f"{path_text}.md")
             if target_path.parts and target_path.parts[0].casefold() == NOTE_ROOT.casefold():
                 target_path = Path(*target_path.parts[1:])
-            if "/" not in path_text:
-                target_path = relative_source.parent / target_path
+            if "/" not in path_text and "\\" not in path_text:
+                local_target = relative_source.parent / target_path
+                lookup_name = Path(path_text).name
+                if lookup_name.lower().endswith(".md"):
+                    lookup_name = lookup_name[:-3]
+                candidates = link_index.get(lookup_name.casefold(), [])
+                if local_target in known_targets:
+                    target_path = local_target
+                elif len(candidates) == 1:
+                    target_path = candidates[0]
+                else:
+                    return label
+            if target_path not in known_targets:
+                return label
             start = relative_source.parent.as_posix() or "."
             href = posixpath.relpath(target_path.as_posix(), start)
         else:
@@ -191,12 +245,24 @@ def progress_friendly(relative_source: Path, text: str) -> str:
         text = text.split("\n## How to use this dashboard", 1)[0].rstrip() + "\n"
     if relative_source == Path("Packet Tracer Progress/Packet Tracer Dashboard.md"):
         text = re.sub(
+            r"\[\[Packet Tracer Progress/Labs/([^|\]]+)(?:\|([^\]]+))?\]\]",
+            lambda match: f"[{match.group(2) or Path(match.group(1)).stem}]"
+            f"(<../labs/{match.group(1).removesuffix(chr(92))}>)",
+            text,
+        )
+        text = re.sub(
             r"\[\[Packet Tracer Progress/Lab Status(?:\|([^\]]+))?\]\]",
             lambda match: f"[{match.group(1) or 'lab checklist and downloads'}]"
             "(<../labs/README.md>)",
             text,
         )
     if relative_source == Path("Udemy Progress/Udemy Progress Dashboard.md"):
+        text = re.sub(
+            r"\[\[Packet Tracer Progress/Packet Tracer Dashboard(?:\|([^\]]+))?\]\]",
+            lambda match: f"[{match.group(1) or 'Packet Tracer Progress'}]"
+            "(<packet-tracer.md>)",
+            text,
+        )
         text = text.split("\n## How to update this dashboard", 1)[0].rstrip() + "\n"
     return github_friendly(text)
 
@@ -417,6 +483,7 @@ def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
 def build_outputs(vault: Path, repo: Path) -> tuple[dict[Path, str], list[tuple[Path, Path]]]:
     outputs: dict[Path, str] = {}
     activity_items: list[tuple[Path, Path]] = []
+    note_records: list[tuple[Path, str, Path, Path]] = []
 
     for source in find_content_notes(vault):
         text = source.read_text(encoding="utf-8")
@@ -425,7 +492,23 @@ def build_outputs(vault: Path, repo: Path) -> tuple[dict[Path, str], list[tuple[
         relative_source = source.relative_to(vault)
         relative_destination = published_note_path(relative_source)
         destination = Path("notes") / relative_destination
-        outputs[destination] = notes_friendly(relative_destination, text)
+        note_records.append((source, text, relative_destination, destination))
+
+    known_targets = {relative_destination for _, _, relative_destination, _ in note_records}
+    link_index: dict[str, list[Path]] = {}
+    for source, text, relative_destination, _ in note_records:
+        for name in frontmatter_note_names(source, text):
+            targets = link_index.setdefault(name.casefold(), [])
+            if relative_destination not in targets:
+                targets.append(relative_destination)
+
+    for source, text, relative_destination, destination in note_records:
+        outputs[destination] = notes_friendly(
+            relative_destination,
+            text,
+            known_targets,
+            link_index,
+        )
         activity_items.append((source, destination))
 
     for relative_source, destination in PROGRESS_SOURCES.items():

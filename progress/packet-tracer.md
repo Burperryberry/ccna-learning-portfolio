@@ -1,7 +1,7 @@
 # Packet Tracer Progress
 
 > [!info] Last synchronized
-> 2026-07-29 09:35 AM EDT · Tracking 20 labs
+> 2026-07-30 09:19 PM EDT · Tracking 21 labs
 
 ## Current session
 
@@ -9,9 +9,9 @@ Packet Tracer is closed
 
 | Today | Total time | Completed | Started |
 |---:|---:|---:|---:|
-| 1h 8m | 3h 44m | 18/20 | 6/20 |
+| 22 min | 4h 35m | 20/21 | 8/21 |
 
-Completion is manual because `.pkt` files do not publish a dependable score. Use the [lab checklist and downloads](<../labs/README.md>) when a lab is done.
+Completion is manual because `.pkt` files do not publish a dependable score. Use the [completion checklist](<../labs/README.md>) when a lab is done.
 
 
 > [!note] Off-device time
@@ -38,28 +38,29 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | ✅ Complete | 22 | Day 22 Lab - Rapid STP | <1 min | 2026-07-27 09:52 AM EDT | [Open lab](<../labs/Day 22 Lab - Rapid STP.pkt>) |
 | ○ Ready | 23 | Day 23 Lab - EtherChannel | 0 min | — | [Open lab](<../labs/Day 23 Lab - EtherChannel.pkt>) |
 | ✅ Complete | 24 | Day 24 Lab - Floating Static Routes | 1h 23m | 2026-07-29 09:06 AM EDT | [Open lab](<../labs/Day 24 Lab - Floating Static Routes.pkt>) |
-| ○ Ready | 25 | Day 25 Lab - EIGRP Configuration | 0 min | — | [Open lab](<../labs/Day 25 Lab - EIGRP Configuration.pkt>) |
+| ✅ Complete | 25 | Day 25 Lab - EIGRP Configuration | 50 min | 2026-07-30 09:02 PM EDT | [Open lab](<../labs/Day 25 Lab - EIGRP Configuration.pkt>) |
 | ✅ Complete | 26 | Day 26 Lab - OSPF (Part 1) | 0 min | — | [Open lab](<../labs/Day 26 Lab - OSPF (Part 1).pkt>) |
 | ✅ Complete | 27 | Day 27 Lab - OSPF (Part 2) | 5 min | 2026-07-29 09:11 AM EDT | [Open lab](<../labs/Day 27 Lab - OSPF (Part 2).pkt>) |
+| ✅ Complete | 28 | Day 28 Lab - OSPF (Part 3) | 1 min | 2026-07-30 09:03 PM EDT | [Open lab](<../labs/Day 28 Lab - OSPF (Part 3).pkt>) |
 
 ## 14-day activity
 
 | Date | Lab time | Activity |
 |---|---:|---|
-| 2026-07-16 | 0 min | ░░░░░░░░░░ |
-| 2026-07-17 | 40 min | ██████░░░░ |
+| 2026-07-17 | 40 min | ████░░░░░░ |
 | 2026-07-18 | 0 min | ░░░░░░░░░░ |
 | 2026-07-19 | 0 min | ░░░░░░░░░░ |
-| 2026-07-20 | 43 min | ██████░░░░ |
+| 2026-07-20 | 43 min | ████░░░░░░ |
 | 2026-07-21 | 8 min | █░░░░░░░░░ |
 | 2026-07-22 | 0 min | ░░░░░░░░░░ |
-| 2026-07-23 | 44 min | ███████░░░ |
+| 2026-07-23 | 44 min | █████░░░░░ |
 | 2026-07-24 | 0 min | ░░░░░░░░░░ |
 | 2026-07-25 | 0 min | ░░░░░░░░░░ |
 | 2026-07-26 | 0 min | ░░░░░░░░░░ |
-| 2026-07-27 | 20 min | ███░░░░░░░ |
+| 2026-07-27 | 20 min | ██░░░░░░░░ |
 | 2026-07-28 | 0 min | ░░░░░░░░░░ |
-| 2026-07-29 | 1h 8m | ██████████ |
+| 2026-07-29 | 1h 37m | ██████████ |
+| 2026-07-30 | 22 min | ██░░░░░░░░ |
 
 > [!tip] How tracking works
 > The background tracker checks once a minute while Packet Tracer is running, records study time, notices saved lab changes, and keeps vault copies current.

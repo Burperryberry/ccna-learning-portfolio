@@ -92,10 +92,3 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 |   ○    |      64 | Day 63 - Ansible, Puppet, & Chef                                              |  0 / 2 |     39min |
 |   ○    |      65 | Complete Network Configuration - CCNA Mega Lab!                               |  0 / 2 | 2hr 37min |
 |   ○    |      66 | BONUS: Recommended Resources                                                  |  0 / 1 |      5min |
-
-## How to update this dashboard
-
-- Complete videos normally in Udemy; do not maintain a duplicate checklist here.
-- When you want a fresh snapshot, sign into Udemy in the Codex in-app browser and ask: **Sync my Udemy CCNA progress.**
-- Use the finish queue to catch isolated incomplete labs or lectures before moving too far ahead.
-- Keep learning notes in `Notes/` and lab completion in [Packet Tracer Progress](<packet-tracer.md>).

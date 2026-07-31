@@ -1,6 +1,6 @@
 # CCNA Notes
 
-This index contains **17 published study notes** covering the learning path through OSPF Part 2. Notes are grouped by topic so they can be used as a study guide or quick CCNA reference.
+This index contains **18 published study notes** covering the learning path through OSPF Part 3. Notes are grouped by topic so they can be used as a study guide or quick CCNA reference.
 
 ## Switching and VLANs
 
@@ -33,6 +33,7 @@ This index contains **17 published study notes** covering the learning path thro
 
 - [OSPF Part 1 — Fundamentals, areas, and basic configuration](<OSPF/OSPF Part 1 - Fundamentals, Areas, and Basic Configuration.md>)
 - [OSPF Part 2 — Cost, neighbors, and adjacencies](<OSPF/OSPF Part 2 - Cost, Neighbors, and Adjacencies.md>)
+- [OSPF Part 3 — Network types, DR/BDR elections, neighbor requirements, and LSAs](<OSPF/OSPF Part 3 - Network Types, DR and BDR, Neighbor Requirements, and LSAs.md>)
 
 ## Continue exploring
 
