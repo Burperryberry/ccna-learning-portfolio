@@ -1,3 +1,4 @@
+
 # CCNA Learning Portfolio
 
 A hands-on record of my progress toward the **Cisco Certified Network Associate (CCNA)** certification.
@@ -5,7 +6,7 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** Day 28 · OSPF (part 3)
+- **Current topic:** Day 29 · First Hop Redundancy Protocols
 - **Packet Tracer labs:** 20 of 21 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
 - **Snapshot date:** July 30, 2026
@@ -15,9 +16,9 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 
 - [Packet Tracer Dashboard](progress/packet-tracer.md)
 - [Packet Tracer Labs](labs/README.md)
+- [Udemy Progress Dashboard](progress/udemy.md)
 - [Anki Progress Dashboard](progress/anki.md)
 - [OSPF Part 3 - Network Types, DR and BDR, Neighbor Requirements, and LSAs](notes/OSPF/OSPF%20Part%203%20-%20Network%20Types%2C%20DR%20and%20BDR%2C%20Neighbor%20Requirements%2C%20and%20LSAs.md)
-- [Udemy Progress Dashboard](progress/udemy.md)
 
 See [the complete activity log](ACTIVITY.md) and the [progress dashboard index](progress/README.md).
 <!-- OBSIDIAN_SYNC:END -->
