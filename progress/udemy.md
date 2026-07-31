@@ -1,24 +1,25 @@
+
 # Udemy CCNA Progress
 
 > [!info] Last synchronized
-> **2026-07-28 05:25 PM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **2026-07-30 09:30 PM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
 
 ## Course position
 
 | Completed videos | Total videos | Course progress | Completed sections | Current section |
 |---:|---:|---:|---:|---:|
-| **57** | **129** | **44.2%** `████░░░░░░` | **28 / 66** | **29 / 66** |
+| **59** | **129** | **45.7%** `█████░░░░░` | **29 / 66** | **30 / 66** |
 
 *Current section reflects your active study position; completion values reflect the last Udemy synchronization.*
 
 > [!tip] Continue studying
-> **Day 28 · OSPF (part 3)** — [Continue Day 28 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **Day 29 · First Hop Redundancy Protocols** — [Continue Day 29 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
 >
 > Related material: [Packet Tracer Progress](<packet-tracer.md>)
 
 ## Finish queue
 
-✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 27.
+✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 28.
 
 ## Curriculum
 
@@ -54,7 +55,7 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 |   ✅    |      26 | Day 25 - RIP & EIGRP                                                          |  2 / 2 |  1hr 5min |
 |   ✅    |      27 | Day 26 - OSPF (part 1)                                                        |  2 / 2 |     50min |
 |   ✅    |      28 | Day 27 - OSPF (part 2)                                                        |  2 / 2 |     48min |
-|   ○    |      29 | Day 28 - OSPF (part 3)                                                        |  0 / 2 |     59min |
+|   ✅    |      29 | Day 28 - OSPF (part 3)                                                        |  2 / 2 |     59min |
 |   ○    |      30 | Day 29 - First Hop Redundancy Protocols                                       |  0 / 2 |     48min |
 |   ○    |      31 | Day 30 - TCP & UDP                                                            |  0 / 2 |     41min |
 |   ○    |      32 | Day 31 - IPv6 (part 1)                                                        |  0 / 2 |     44min |
