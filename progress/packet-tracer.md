@@ -1,7 +1,7 @@
 # Packet Tracer Progress
 
 > [!info] Last synchronized
-> 2026-08-04 07:30 AM EDT · Tracking 23 labs
+> 2026-08-04 07:40 AM EDT · Tracking 23 labs
 
 ## Current session
 
@@ -9,7 +9,7 @@ Packet Tracer is closed
 
 | Today | Total time | Completed | Started |
 |---:|---:|---:|---:|
-| 0 min | 4h 35m | 20/23 | 8/23 |
+| 0 min | 4h 35m | 22/23 | 8/23 |
 
 Completion is manual because `.pkt` files do not publish a dependable score. Use the [completion checklist](<../labs/README.md>) when a lab is done.
 
@@ -42,8 +42,8 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | ✅ Complete | 26 | Day 26 Lab - OSPF (Part 1) | 0 min | — | [Open lab](<../labs/Day 26 Lab - OSPF (Part 1).pkt>) |
 | ✅ Complete | 27 | Day 27 Lab - OSPF (Part 2) | 5 min | 2026-07-29 09:11 AM EDT | [Open lab](<../labs/Day 27 Lab - OSPF (Part 2).pkt>) |
 | ✅ Complete | 28 | Day 28 Lab - OSPF (Part 3) | 1 min | 2026-08-03 06:49 PM EDT | [Open lab](<../labs/Day 28 Lab - OSPF (Part 3).pkt>) |
-| ○ Ready | 29 | Day 29 Lab - HSRP Configuration | 0 min | — | [Open lab](<../labs/Day 29 Lab - HSRP Configuration.pkt>) |
-| ○ Ready | 31 | Day 31 Lab - IPv6 Configuration (Part 1) | 0 min | — | [Open lab](<../labs/Day 31 Lab - IPv6 Configuration (Part 1).pkt>) |
+| ✅ Complete | 29 | Day 29 Lab - HSRP Configuration | 0 min | — | [Open lab](<../labs/Day 29 Lab - HSRP Configuration.pkt>) |
+| ✅ Complete | 31 | Day 31 Lab - IPv6 Configuration (Part 1) | 0 min | — | [Open lab](<../labs/Day 31 Lab - IPv6 Configuration (Part 1).pkt>) |
 
 ## 14-day activity
 
