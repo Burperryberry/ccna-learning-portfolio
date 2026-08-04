@@ -1,4 +1,3 @@
-
 # Udemy CCNA Progress
 
 > [!info] Last synchronized
