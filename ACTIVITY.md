@@ -1,15 +1,14 @@
-
 # Recent CCNA Learning Activity
 
 This page summarizes publishable study artifacts and progress from the CCNA Obsidian vault.
 
 ## Current portfolio snapshot
 
-- **Published notes:** 18
+- **Published notes:** 21
 - **Current topic:** Day 29 · First Hop Redundancy Protocols
-- **Packet Tracer:** 20/21 labs complete
+- **Packet Tracer:** 20/23 labs complete
 - **Udemy:** 59 of 129 videos complete (45.7%)
-- **Anki:** 707 cards tracked
+- **Anki:** 823 cards tracked
 
 ## Quick links
 
@@ -21,18 +20,21 @@ This page summarizes publishable study artifacts and progress from the CCNA Obsi
 
 ## Latest learning
 
-- [OSPF Part 3 - Network Types, DR and BDR, Neighbor Requirements, and LSAs](notes/OSPF/OSPF%20Part%203%20-%20Network%20Types%2C%20DR%20and%20BDR%2C%20Neighbor%20Requirements%2C%20and%20LSAs.md)
-- [OSPF Part 2 - Cost, Neighbors, and Adjacencies](notes/OSPF/OSPF%20Part%202%20-%20Cost%2C%20Neighbors%2C%20and%20Adjacencies.md)
-- [OSPF Part 1 - Fundamentals, Areas, and Basic Configuration](notes/OSPF/OSPF%20Part%201%20-%20Fundamentals%2C%20Areas%2C%20and%20Basic%20Configuration.md)
+- [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md)
+- [TCP and UDP - Transport Layer Fundamentals](notes/TCP%20%26%20UDP/TCP%20and%20UDP%20-%20Transport%20Layer%20Fundamentals.md)
+- [First Hop Redundancy Protocols - HSRP, VRRP, and GLBP](notes/FHRP/First%20Hop%20Redundancy%20Protocols%20-%20HSRP%2C%20VRRP%2C%20and%20GLBP.md)
 
 ## Published activity
 
 | Last updated | Area | Artifact |
 |---|---|---|
-| 2026-07-30 21:31 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-07-30 21:31 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
+| 2026-08-04 07:30 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
+| 2026-08-04 07:30 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
+| 2026-08-04 07:07 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
+| 2026-08-03 18:15 EDT | IPv6 | [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md) |
+| 2026-08-03 18:15 EDT | TCP & UDP | [TCP and UDP - Transport Layer Fundamentals](notes/TCP%20%26%20UDP/TCP%20and%20UDP%20-%20Transport%20Layer%20Fundamentals.md) |
+| 2026-07-31 08:55 EDT | FHRP | [First Hop Redundancy Protocols - HSRP, VRRP, and GLBP](notes/FHRP/First%20Hop%20Redundancy%20Protocols%20-%20HSRP%2C%20VRRP%2C%20and%20GLBP.md) |
 | 2026-07-30 21:30 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
-| 2026-07-30 20:32 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
 | 2026-07-29 11:23 EDT | OSPF | [OSPF Part 3 - Network Types, DR and BDR, Neighbor Requirements, and LSAs](notes/OSPF/OSPF%20Part%203%20-%20Network%20Types%2C%20DR%20and%20BDR%2C%20Neighbor%20Requirements%2C%20and%20LSAs.md) |
 | 2026-07-28 16:04 EDT | OSPF | [OSPF Part 2 - Cost, Neighbors, and Adjacencies](notes/OSPF/OSPF%20Part%202%20-%20Cost%2C%20Neighbors%2C%20and%20Adjacencies.md) |
 | 2026-07-28 14:43 EDT | OSPF | [OSPF Part 1 - Fundamentals, Areas, and Basic Configuration](notes/OSPF/OSPF%20Part%201%20-%20Fundamentals%2C%20Areas%2C%20and%20Basic%20Configuration.md) |
