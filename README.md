@@ -13,9 +13,9 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
 
-- [Udemy Progress Dashboard](progress/udemy.md)
 - [Packet Tracer Dashboard](progress/packet-tracer.md)
 - [Packet Tracer Labs](labs/README.md)
+- [Udemy Progress Dashboard](progress/udemy.md)
 - [Anki Progress Dashboard](progress/anki.md)
 - [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md)
 
