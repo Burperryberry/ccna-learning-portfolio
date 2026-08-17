@@ -1,7 +1,7 @@
 # Packet Tracer Progress
 
 > [!info] Last synchronized
-> 2026-08-04 09:46 AM EDT · Tracking 23 labs
+> 2026-08-17 11:52 AM EDT · Tracking 26 labs
 
 ## Current session
 
@@ -9,7 +9,7 @@ Packet Tracer is closed
 
 | Today | Total time | Completed | Started |
 |---:|---:|---:|---:|
-| 15 min | 4h 50m | 22/23 | 9/23 |
+| 0 min | 4h 50m | 25/26 | 9/26 |
 
 Completion is manual because `.pkt` files do not publish a dependable score. Use the [completion checklist](<../labs/README.md>) when a lab is done.
 
@@ -43,26 +43,29 @@ Completion is manual because `.pkt` files do not publish a dependable score. Use
 | ✅ Complete | 27 | Day 27 Lab - OSPF (Part 2) | 5 min | 2026-07-29 09:11 AM EDT | [Open lab](<../labs/Day 27 Lab - OSPF (Part 2).pkt>) |
 | ✅ Complete | 28 | Day 28 Lab - OSPF (Part 3) | 15 min | 2026-08-04 09:42 AM EDT | [Open lab](<../labs/Day 28 Lab - OSPF (Part 3).pkt>) |
 | ✅ Complete | 29 | Day 29 Lab - HSRP Configuration | 0 min | — | [Open lab](<../labs/Day 29 Lab - HSRP Configuration.pkt>) |
-| ✅ Complete | 31 | Day 31 Lab - IPv6 Configuration (Part 1) | 1 min | 2026-08-04 09:43 AM EDT | [Open lab](<../labs/Day 31 Lab - IPv6 Configuration (Part 1).pkt>) |
+| ✅ Complete | 31 | Day 31 Lab - IPv6 Configuration (Part 1) | 1 min | 2026-08-12 08:19 AM EDT | [Open lab](<../labs/Day 31 Lab - IPv6 Configuration (Part 1).pkt>) |
+| ✅ Complete | 32 | Day 32 Lab - IPv6 Configuration (Part 2) | 0 min | — | [Open lab](<../labs/Day 32 Lab - IPv6 Configuration (Part 2).pkt>) |
+| ✅ Complete | 33 | Day 33 Lab - IPv6 Static Routes | 0 min | — | [Open lab](<../labs/Day 33 Lab - IPv6 Static Routes.pkt>) |
+| ✅ Complete | 34 | Day 34 Lab - Standard ACLs | 0 min | — | [Open lab](<../labs/Day 34 Lab - Standard ACLs.pkt>) |
 
 ## 14-day activity
 
 | Date | Lab time | Activity |
 |---|---:|---|
-| 2026-07-22 | 0 min | ░░░░░░░░░░ |
-| 2026-07-23 | 44 min | █████░░░░░ |
-| 2026-07-24 | 0 min | ░░░░░░░░░░ |
-| 2026-07-25 | 0 min | ░░░░░░░░░░ |
-| 2026-07-26 | 0 min | ░░░░░░░░░░ |
-| 2026-07-27 | 20 min | ██░░░░░░░░ |
-| 2026-07-28 | 0 min | ░░░░░░░░░░ |
-| 2026-07-29 | 1h 37m | ██████████ |
-| 2026-07-30 | 22 min | ██░░░░░░░░ |
-| 2026-07-31 | 0 min | ░░░░░░░░░░ |
-| 2026-08-01 | 0 min | ░░░░░░░░░░ |
-| 2026-08-02 | 0 min | ░░░░░░░░░░ |
-| 2026-08-03 | 0 min | ░░░░░░░░░░ |
-| 2026-08-04 | 15 min | ██░░░░░░░░ |
+| 2026-08-04 | 15 min | ██████████ |
+| 2026-08-05 | 0 min | ░░░░░░░░░░ |
+| 2026-08-06 | 0 min | ░░░░░░░░░░ |
+| 2026-08-07 | 0 min | ░░░░░░░░░░ |
+| 2026-08-08 | 0 min | ░░░░░░░░░░ |
+| 2026-08-09 | 0 min | ░░░░░░░░░░ |
+| 2026-08-10 | 0 min | ░░░░░░░░░░ |
+| 2026-08-11 | 0 min | ░░░░░░░░░░ |
+| 2026-08-12 | 0 min | ░░░░░░░░░░ |
+| 2026-08-13 | 0 min | ░░░░░░░░░░ |
+| 2026-08-14 | 0 min | ░░░░░░░░░░ |
+| 2026-08-15 | 0 min | ░░░░░░░░░░ |
+| 2026-08-16 | 0 min | ░░░░░░░░░░ |
+| 2026-08-17 | 0 min | ░░░░░░░░░░ |
 
 > [!tip] How tracking works
 > The background tracker checks once a minute while Packet Tracer is running, records study time, notices saved lab changes, and keeps vault copies current.
