@@ -1,24 +1,24 @@
 # Udemy CCNA Progress
 
 > [!info] Last synchronized
-> **2026-08-04 07:39 AM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **2026-08-17 11:47 AM EDT** · [Master Cisco CCNA 200-301: Comprehensive All-in-One Course](https://www.udemy.com/course/ccna-jitl/learn/#content)
 
 ## Course position
 
 | Completed videos | Total videos | Course progress | Completed sections | Current section |
 |---:|---:|---:|---:|---:|
-| **65** | **129** | **50.4%** `█████░░░░░` | **32 / 66** | **33 / 66** |
+| **73** | **129** | **56.6%** `██████░░░░` | **36 / 66** | **37 / 66** |
 
 *Current section reflects your active study position; completion values reflect the last Udemy synchronization.*
 
 > [!tip] Continue studying
-> **Day 32 · IPv6 (part 2)** — [Continue Day 32 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
+> **Day 36 · CDP & LLDP** — [Continue Day 36 in Udemy](https://www.udemy.com/course/ccna-jitl/learn/#content)
 >
 > Related material: [Packet Tracer Progress](<packet-tracer.md>)
 
 ## Finish queue
 
-✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 31.
+✅ No earlier incomplete sections. Your course sequence is fully up to date through Day 35.
 
 ## Curriculum
 
@@ -58,10 +58,10 @@ Udemy counts lecture and lab video items together. The table is a synchronized s
 |   ✅    |      30 | Day 29 - First Hop Redundancy Protocols                                       |  2 / 2 |     48min |
 |   ✅    |      31 | Day 30 - TCP & UDP                                                            |  2 / 2 |     41min |
 |   ✅    |      32 | Day 31 - IPv6 (part 1)                                                        |  2 / 2 |     44min |
-|   ○    |      33 | Day 32 - IPv6 (part 2)                                                        |  0 / 2 |     45min |
-|   ○    |      34 | Day 33 - IPv6 (part 3)                                                        |  0 / 2 |     52min |
-|   ○    |      35 | Day 34 - Standard ACLs                                                        |  0 / 2 |     57min |
-|   ○    |      36 | Day 35 - Extended ACLs                                                        |  0 / 2 |     47min |
+|   ✅    |      33 | Day 32 - IPv6 (part 2)                                                        |  2 / 2 |     45min |
+|   ✅    |      34 | Day 33 - IPv6 (part 3)                                                        |  2 / 2 |     52min |
+|   ✅    |      35 | Day 34 - Standard ACLs                                                        |  2 / 2 |     57min |
+|   ✅    |      36 | Day 35 - Extended ACLs                                                        |  2 / 2 |     47min |
 |   ○    |      37 | Day 36 - CDP & LLDP                                                           |  0 / 2 |     53min |
 |   ○    |      38 | Day 37 - Network Time Protocol (NTP)                                          |  0 / 2 |     51min |
 |   ○    |      39 | Day 38 - Domain Name System (DNS)                                             |  0 / 2 |     35min |

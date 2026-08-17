@@ -4,11 +4,11 @@ This page summarizes publishable study artifacts and progress from the CCNA Obsi
 
 ## Current portfolio snapshot
 
-- **Published notes:** 21
-- **Current topic:** Day 32 · IPv6 (part 2)
-- **Packet Tracer:** 22/23 labs complete
-- **Udemy:** 65 of 129 videos complete (50.4%)
-- **Anki:** 823 cards tracked
+- **Published notes:** 23
+- **Current topic:** Day 36 · CDP & LLDP
+- **Packet Tracer:** 25/26 labs complete
+- **Udemy:** 73 of 129 videos complete (56.6%)
+- **Anki:** 965 cards tracked
 
 ## Quick links
 
@@ -20,18 +20,20 @@ This page summarizes publishable study artifacts and progress from the CCNA Obsi
 
 ## Latest learning
 
+- [Standard Access Control Lists (ACLs)](notes/ACL/Standard%20Access%20Control%20Lists%20%28ACLs%29.md)
+- [Extended Access Control Lists (ACLs)](notes/ACL/Extended%20Access%20Control%20Lists%20%28ACLs%29.md)
 - [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md)
-- [TCP and UDP - Transport Layer Fundamentals](notes/TCP%20%26%20UDP/TCP%20and%20UDP%20-%20Transport%20Layer%20Fundamentals.md)
-- [First Hop Redundancy Protocols - HSRP, VRRP, and GLBP](notes/FHRP/First%20Hop%20Redundancy%20Protocols%20-%20HSRP%2C%20VRRP%2C%20and%20GLBP.md)
 
 ## Published activity
 
 | Last updated | Area | Artifact |
 |---|---|---|
-| 2026-08-04 09:46 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-08-04 09:46 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
-| 2026-08-04 07:40 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
-| 2026-08-04 07:07 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
+| 2026-08-17 11:52 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
+| 2026-08-17 11:52 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
+| 2026-08-17 11:52 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
+| 2026-08-17 11:45 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
+| 2026-08-17 10:35 EDT | ACL | [Standard Access Control Lists (ACLs)](notes/ACL/Standard%20Access%20Control%20Lists%20%28ACLs%29.md) |
+| 2026-08-17 10:35 EDT | ACL | [Extended Access Control Lists (ACLs)](notes/ACL/Extended%20Access%20Control%20Lists%20%28ACLs%29.md) |
 | 2026-08-03 18:15 EDT | IPv6 | [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md) |
 | 2026-08-03 18:15 EDT | TCP & UDP | [TCP and UDP - Transport Layer Fundamentals](notes/TCP%20%26%20UDP/TCP%20and%20UDP%20-%20Transport%20Layer%20Fundamentals.md) |
 | 2026-07-31 08:55 EDT | FHRP | [First Hop Redundancy Protocols - HSRP, VRRP, and GLBP](notes/FHRP/First%20Hop%20Redundancy%20Protocols%20-%20HSRP%2C%20VRRP%2C%20and%20GLBP.md) |
