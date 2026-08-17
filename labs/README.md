@@ -6,10 +6,10 @@ This is the single public checklist and download index for the Cisco Packet Trac
 
 | Metric | Current |
 |---|---:|
-| Tracked labs | **23** |
-| Complete | **22** |
+| Tracked labs | **26** |
+| Complete | **25** |
 | Ready to complete | **1** |
-| Lab files available in this folder | **23 of 23** |
+| Lab files available in this folder | **26 of 26** |
 
 See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study time and recent activity.
 
@@ -42,5 +42,8 @@ After completing a lab, use the [lab reflection template](REFLECTION_TEMPLATE.md
 | 28 | OSPF (Part 3) | Complete | [Open](<Day 28 Lab - OSPF (Part 3).pkt>) |
 | 29 | HSRP Configuration | Complete | [Open](<Day 29 Lab - HSRP Configuration.pkt>) |
 | 31 | IPv6 Configuration (Part 1) | Complete | [Open](<Day 31 Lab - IPv6 Configuration (Part 1).pkt>) |
+| 32 | IPv6 Configuration (Part 2) | Complete | [Open](<Day 32 Lab - IPv6 Configuration (Part 2).pkt>) |
+| 33 | IPv6 Static Routes | Complete | [Open](<Day 33 Lab - IPv6 Static Routes.pkt>) |
+| 34 | Standard ACLs | Complete | [Open](<Day 34 Lab - Standard ACLs.pkt>) |
 
 Packet Tracer files are binary. Download a file and open it with Cisco Packet Tracer to inspect or continue the lab. Completion is tracked manually because Packet Tracer files do not provide a dependable completion score.
