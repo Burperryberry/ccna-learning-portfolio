@@ -5,19 +5,19 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** Day 32 · IPv6 (part 2)
-- **Packet Tracer labs:** 22 of 23 marked complete
+- **Current topic:** Day 36 · CDP & LLDP
+- **Packet Tracer labs:** 25 of 26 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
-- **Snapshot date:** August 4, 2026
+- **Snapshot date:** August 17, 2026
 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
 
+- [Udemy Progress Dashboard](progress/udemy.md)
 - [Packet Tracer Dashboard](progress/packet-tracer.md)
 - [Packet Tracer Labs](labs/README.md)
-- [Udemy Progress Dashboard](progress/udemy.md)
 - [Anki Progress Dashboard](progress/anki.md)
-- [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md)
+- [Standard Access Control Lists (ACLs)](notes/ACL/Standard%20Access%20Control%20Lists%20%28ACLs%29.md)
 
 See [the complete activity log](ACTIVITY.md) and the [progress dashboard index](progress/README.md).
 <!-- OBSIDIAN_SYNC:END -->
