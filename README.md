@@ -5,21 +5,21 @@ A hands-on record of my progress toward the **Cisco Certified Network Associate 
 ## Current snapshot
 
 - **Status:** In progress
-- **Current topic:** Day 36 · CDP & LLDP
-- **Packet Tracer labs:** 25 of 26 marked complete
+- **Current topic:** Day 38 — Domain Name System (DNS)
+- **Packet Tracer labs:** 28 of 28 marked complete
 - **Study system:** Cisco Packet Tracer, Obsidian, Anki, and Udemy
-- **Snapshot date:** August 17, 2026
+- **Snapshot date:** August 23, 2026
 
 <!-- OBSIDIAN_SYNC:START -->
 ## Recent Activity
 
-- [Udemy Progress Dashboard](progress/udemy.md)
-- [Packet Tracer Dashboard](progress/packet-tracer.md)
+- [CCNA Progress Overview](progress/README.md)
 - [Packet Tracer Labs](labs/README.md)
-- [Anki Progress Dashboard](progress/anki.md)
-- [Standard Access Control Lists (ACLs)](notes/ACL/Standard%20Access%20Control%20Lists%20%28ACLs%29.md)
+- [CCNA 200-301 v1.1 Coverage](notes/Blueprint/CCNA%20200-301%20v1.1%20Coverage.md)
+- [Domain Name System (DNS)](notes/DNS/Domain%20Name%20System%20%28DNS%29.md)
+- [CCNA Capture Workflow](notes/Wireshark/CCNA%20Capture%20Workflow.md)
 
-See [the complete activity log](ACTIVITY.md) and the [progress dashboard index](progress/README.md).
+See [the complete activity log](ACTIVITY.md) and the [progress overview](progress/README.md).
 <!-- OBSIDIAN_SYNC:END -->
 
 ## Portfolio sections
@@ -27,16 +27,18 @@ See [the complete activity log](ACTIVITY.md) and the [progress dashboard index](
 | Folder | Contents |
 |---|---|
 | [`labs/`](labs/) | Packet Tracer `.pkt` files and the lab completion snapshot |
-| [`notes/`](notes/) | Topic notes covering VLANs, trunking, DTP/VTP, and spanning tree |
-| [`progress/`](progress/) | Current Anki, Packet Tracer, and Udemy dashboards |
+| [`notes/`](notes/) | Protocol notes, configuration references, and troubleshooting evidence |
+| [`progress/`](progress/) | Concise course, lab, and retrieval-practice overview |
+| [`history/`](history/) | Archived milestone snapshots retained for longitudinal reference |
 
 ## Repository structure
 
 ```text
 ccna-learning-portfolio/
+├── history/           # Older milestone snapshots
 ├── labs/
 ├── notes/
-└── progress/
+└── progress/          # One employer-facing progress overview
 ```
 
 ## Skills in development

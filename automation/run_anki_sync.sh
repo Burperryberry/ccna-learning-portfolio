@@ -41,7 +41,7 @@ fi
   --collection "$collection" \
   --repo "$repo_dir"
 
-git add -- progress/anki.md
+git add -- progress/README.md
 if ! git diff --cached --quiet; then
   git commit -m "Sync Anki progress $(date +%F)"
 else
@@ -63,8 +63,8 @@ if ! git diff --quiet origin/main...HEAD; then
     printf '%s\n' \
       '## What changed' \
       '' \
-      '- Refreshed the public CCNA Anki progress dashboard.' \
-      '- Added aggregate workload, review activity, streak, and weak-topic metrics.' \
+      '- Refreshed retrieval-practice momentum in the combined CCNA progress overview.' \
+      '- Kept detailed Anki workload and weak-topic data private.' \
       '' \
       '## Privacy' \
       '' \

@@ -2,11 +2,19 @@
   "managed_files": [
     "ACTIVITY.md",
     "labs/README.md",
+    "notes/ACL/Extended Access Control Lists (ACLs).md",
+    "notes/ACL/Standard Access Control Lists (ACLs).md",
+    "notes/Blueprint/CCNA 200-301 v1.1 Coverage.md",
+    "notes/CDP & LLDP/CDP & LLDP.md",
+    "notes/DNS/Domain Name System (DNS).md",
     "notes/DTP & VTP/DTP & VTP - Slide Summary.md",
     "notes/Dynamic Routing/Dynamic Routing - Fundamentals.md",
     "notes/EtherChannel/EtherChannel - Link Aggregation.md",
+    "notes/Ethernet LAN Switching/Day 05 - Ethernet LAN Switching (Part 1).md",
+    "notes/Ethernet LAN Switching/Day 06 - Ethernet LAN Switching (Part 2).md",
     "notes/FHRP/First Hop Redundancy Protocols - HSRP, VRRP, and GLBP.md",
     "notes/IPv6/IPv6 Part 1 - Addressing, Prefixes, and Configuration.md",
+    "notes/NTP/Network Time Protocol (NTP).md",
     "notes/OSPF/OSPF Part 1 - Fundamentals, Areas, and Basic Configuration.md",
     "notes/OSPF/OSPF Part 2 - Cost, Neighbors, and Adjacencies.md",
     "notes/OSPF/OSPF Part 3 - Network Types, DR and BDR, Neighbor Requirements, and LSAs.md",
@@ -23,9 +31,7 @@
     "notes/VLANs/VLANs Part 1 - LANs, Broadcast Domains, and Access Ports.md",
     "notes/VLANs/VLANs Part 2 - Trunks, 802.1Q, and ROAS.md",
     "notes/VLANs/VLANs Part 3 - Native VLANs, Multilayer Switching, and SVIs.md",
-    "progress/README.md",
-    "progress/anki.md",
-    "progress/packet-tracer.md",
-    "progress/udemy.md"
+    "notes/Wireshark/CCNA Capture Workflow.md",
+    "progress/README.md"
   ]
 }

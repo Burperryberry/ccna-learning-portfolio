@@ -15,11 +15,13 @@ from urllib.parse import quote
 
 EXCLUDED_PARTS = {".obsidian", ".trash", ".git", ".anki-sync", ".packet-tracer-tracker"}
 PROGRESS_SOURCES = {
-    Path("Anki Progress/Anki Progress Dashboard.md"): Path("progress/anki.md"),
     Path("Packet Tracer Progress/Lab Status.md"): Path("labs/README.md"),
-    Path("Packet Tracer Progress/Packet Tracer Dashboard.md"): Path("progress/packet-tracer.md"),
-    Path("Udemy Progress/Udemy Progress Dashboard.md"): Path("progress/udemy.md"),
 }
+PROGRESS_ROOTS = {"Anki Progress", "Packet Tracer Progress", "Udemy Progress"}
+VAULT_ONLY_ROOTS = {"00 Dashboard", "Automation", "Templates"}
+PROGRESS_DESTINATION = Path("progress/README.md")
+ANKI_MOMENTUM_START = "<!-- ANKI_MOMENTUM:START -->"
+ANKI_MOMENTUM_END = "<!-- ANKI_MOMENTUM:END -->"
 NOTE_ROOT = "Notes"
 MANIFEST = Path(".obsidian-sync-manifest.json")
 README_START = "<!-- OBSIDIAN_SYNC:START -->"
@@ -216,8 +218,8 @@ def lab_readme(text: str) -> str:
             f"| Ready to complete | **{ready}** |",
             f"| Lab files available in this folder | **{len(labs)} of {len(labs)}** |",
             "",
-            "See the [Packet Tracer progress dashboard](../progress/packet-tracer.md) for study "
-            "time and recent activity.",
+            "See the [CCNA progress overview](../progress/README.md) for study time and "
+            "recent activity.",
             "",
             "After completing a lab, use the [lab reflection template](REFLECTION_TEMPLATE.md) "
             "to record what you configured, how you verified it, and what you learned.",
@@ -267,21 +269,94 @@ def progress_friendly(relative_source: Path, text: str) -> str:
     return github_friendly(text)
 
 
-def progress_readme() -> str:
-    return """# CCNA Progress Dashboards
+def markdown_section(text: str, heading: str) -> str:
+    marker = f"## {heading}"
+    start = text.find(marker)
+    if start == -1:
+        return ""
+    body_start = text.find("\n", start)
+    if body_start == -1:
+        return ""
+    end = text.find("\n## ", body_start + 1)
+    return text[body_start + 1 : end if end != -1 else len(text)].strip()
 
-This folder contains the public progress snapshots generated from the CCNA study system.
 
-| Dashboard | What it tracks |
-|---|---|
-| [Anki](anki.md) | Card workload, reviews, study time, and weak-topic signals |
-| [Packet Tracer](packet-tracer.md) | Lab completion, tracked practice time, and recent activity |
-| [Udemy](udemy.md) | Course position, completed videos, and section progress |
+def first_markdown_table(text: str) -> str:
+    rows = []
+    for line in text.splitlines():
+        if line.startswith("|"):
+            rows.append(line)
+        elif rows:
+            break
+    return "\n".join(rows)
 
-The [Packet Tracer lab index](../labs/README.md) is the single checklist and download page for lab files.
 
-These pages are generated from local dashboards. Their “Last synchronized” timestamps show when each source was most recently published.
-"""
+def manual_course_checkpoint(vault: Path) -> str | None:
+    source = vault / "00 Dashboard/CCNA Command Center.md"
+    if not source.exists():
+        return None
+    match = re.search(r"(?m)^> \*\*(Day [^*]+)\*\*", source.read_text(encoding="utf-8"))
+    return match.group(1).strip() if match else None
+
+
+def remaining_labs(text: str) -> list[str]:
+    labels = []
+    for line in text.splitlines():
+        if not line.startswith("- [ ] "):
+            continue
+        match = re.search(r"\|([^\]]+)\]\]", line)
+        labels.append(match.group(1) if match else line.removeprefix("- [ ] ").strip())
+    return labels
+
+
+def progress_overview(vault: Path) -> tuple[str, Path] | None:
+    packet_source = vault / "Packet Tracer Progress/Packet Tracer Dashboard.md"
+    lab_source = vault / "Packet Tracer Progress/Lab Status.md"
+    anki_source = vault / "Anki Progress/Anki Progress Dashboard.md"
+    sources = [path for path in (packet_source, lab_source, anki_source) if path.exists()]
+    if not sources:
+        return None
+
+    packet_text = packet_source.read_text(encoding="utf-8") if packet_source.exists() else ""
+    lab_text = lab_source.read_text(encoding="utf-8") if lab_source.exists() else ""
+    anki_text = anki_source.read_text(encoding="utf-8") if anki_source.exists() else ""
+    packet_table = first_markdown_table(markdown_section(packet_text, "Current session"))
+    anki_table = first_markdown_table(markdown_section(anki_text, "Momentum"))
+    lab_lines = [f"- {label}" for label in remaining_labs(lab_text)] or [
+        "- No labs are currently marked incomplete."
+    ]
+    parts = [
+        "# CCNA Progress Overview",
+        "",
+        "A concise, automatically generated view of current coursework, practical labs, and retrieval practice.",
+        "",
+        "## Current course checkpoint",
+        "",
+        f"**{manual_course_checkpoint(vault) or 'Current CCNA coursework in progress'}**",
+        "",
+        "## Practical lab progress",
+        "",
+        packet_table or "Packet Tracer progress is awaiting its first synchronized snapshot.",
+        "",
+        "### Remaining labs",
+        "",
+        *lab_lines,
+        "",
+        "## Retrieval-practice momentum",
+        "",
+        ANKI_MOMENTUM_START,
+        anki_table or "Anki progress is awaiting its first synchronized snapshot.",
+        ANKI_MOMENTUM_END,
+        "",
+        "## Evidence",
+        "",
+        "- Browse the [technical notes](../notes/) for protocol explanations and troubleshooting references.",
+        "- Browse the [Packet Tracer labs](../labs/) for hands-on configuration artifacts.",
+        "",
+        "Detailed local dashboards, study queues, and automation instructions remain private to keep this portfolio focused.",
+        "",
+    ]
+    return "\n".join(parts), max(sources, key=lambda path: path.stat().st_mtime)
 
 
 def published_note_path(relative_source: Path) -> Path:
@@ -292,13 +367,12 @@ def published_note_path(relative_source: Path) -> Path:
 
 
 def find_content_notes(vault: Path) -> list[Path]:
-    progress_roots = {path.parts[0] for path in PROGRESS_SOURCES}
     notes: list[Path] = []
     for path in vault.rglob("*.md"):
         relative = path.relative_to(vault)
         if any(part in EXCLUDED_PARTS for part in relative.parts):
             continue
-        if relative.parts[0] in progress_roots:
+        if relative.parts[0] in PROGRESS_ROOTS | VAULT_ONLY_ROOTS:
             continue
         notes.append(path)
     return sorted(notes)
@@ -318,50 +392,15 @@ def scan_for_secrets(outputs: dict[Path, str]) -> None:
 def artifact_label(source: Path, destination: Path) -> str:
     if destination == Path("labs/README.md"):
         return "Packet Tracer Labs"
+    if destination == PROGRESS_DESTINATION:
+        return "CCNA Progress Overview"
     return source.stem
 
 
 def activity_markdown(items: list[tuple[Path, Path]]) -> str:
     ordered = sorted(items, key=lambda item: item[0].stat().st_mtime, reverse=True)
     note_items = [item for item in ordered if item[1].parts[0] == "notes"]
-    progress_sources = {destination.as_posix(): source for source, destination in ordered}
-
-    def read_progress(destination: str) -> str:
-        source = progress_sources.get(destination)
-        if source is None:
-            return ""
-        return source.read_text(encoding="utf-8")
-
-    packet_text = read_progress("progress/packet-tracer.md")
-    udemy_text = read_progress("progress/udemy.md")
-    anki_text = read_progress("progress/anki.md")
-
-    packet_match = re.search(
-        r"\|\s*[^|\n]+\|\s*[^|\n]+\|\s*(\d+\s*/\s*\d+)\s*\|\s*[^|\n]+\|",
-        packet_text,
-    )
-    udemy_match = re.search(
-        r"\|\s*\*\*(\d+)\*\*\s*\|\s*\*\*(\d+)\*\*\s*\|\s*\*\*([\d.]+%)\*\*",
-        udemy_text,
-    )
-    anki_match = re.search(
-        r"\|(?:\s*\*\*\d+\*\*\s*\|){5}\s*\*\*(\d+)\*\*\s*\|",
-        anki_text,
-    )
-    topic_match = re.search(r">\s*\*\*(Day [^*]+)\*\*", udemy_text)
-
     summary = [f"- **Published notes:** {len(note_items)}"]
-    if topic_match:
-        summary.append(f"- **Current topic:** {topic_match.group(1)}")
-    if packet_match:
-        summary.append(f"- **Packet Tracer:** {packet_match.group(1).replace(' ', '')} labs complete")
-    if udemy_match:
-        summary.append(
-            f"- **Udemy:** {udemy_match.group(1)} of {udemy_match.group(2)} videos complete "
-            f"({udemy_match.group(3)})"
-        )
-    if anki_match:
-        summary.append(f"- **Anki:** {anki_match.group(1)} cards tracked")
 
     recent_lines = []
     for source, destination in note_items[:3]:
@@ -390,9 +429,7 @@ def activity_markdown(items: list[tuple[Path, Path]]) -> str:
             "",
             "- [Browse all study notes](notes/README.md)",
             "- [Download Packet Tracer labs](labs/README.md)",
-            "- [Packet Tracer progress](progress/packet-tracer.md)",
-            "- [Anki progress](progress/anki.md)",
-            "- [Udemy progress](progress/udemy.md)",
+            "- [CCNA progress overview](progress/README.md)",
             "",
             "## Latest learning",
             "",
@@ -408,35 +445,29 @@ def activity_markdown(items: list[tuple[Path, Path]]) -> str:
     )
 
 
-def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
+def update_readme(
+    readme: str, items: list[tuple[Path, Path]], current_topic: str | None = None
+) -> str:
     ordered = sorted(items, key=lambda item: item[0].stat().st_mtime, reverse=True)
     content_items = [item for item in ordered if item[1].parts[0] == "notes"]
     sources = {destination: source for source, destination in ordered}
 
-    udemy_source = sources.get(Path("progress/udemy.md"))
-    udemy_text = udemy_source.read_text(encoding="utf-8") if udemy_source else ""
-    topic_match = re.search(r">\s*\*\*(Day [^*]+)\*\*", udemy_text)
-    current_topic = topic_match.group(1) if topic_match else (
-        content_items[0][0].parent.name if content_items else None
-    )
+    current_topic = current_topic or (content_items[0][0].parent.name if content_items else None)
     if current_topic:
         topic_pattern = re.compile(r"(?m)^(?P<prefix>\s*(?:-\s*)?\*\*Current topic:\*\*)[^\n]*$")
         readme = topic_pattern.sub(lambda match: f"{match.group('prefix')} {current_topic}", readme)
 
-    packet_source = sources.get(Path("progress/packet-tracer.md"))
-    packet_text = packet_source.read_text(encoding="utf-8") if packet_source else ""
-    packet_match = re.search(
-        r"\|\s*[^|\n]+\|\s*[^|\n]+\|\s*(\d+)\s*/\s*(\d+)\s*\|\s*[^|\n]+\|",
-        packet_text,
-    )
-    if packet_match:
+    lab_source = sources.get(Path("labs/README.md"))
+    lab_text = lab_source.read_text(encoding="utf-8") if lab_source else ""
+    lab_total = len(re.findall(r"(?m)^- \[[ xX]\] ", lab_text))
+    lab_complete = len(re.findall(r"(?m)^- \[[xX]\] ", lab_text))
+    if lab_total:
         lab_pattern = re.compile(
             r"(?m)^(?P<prefix>\s*(?:-\s*)?\*\*Packet Tracer labs:\*\*)[^\n]*$"
         )
         readme = lab_pattern.sub(
             lambda match: (
-                f"{match.group('prefix')} {packet_match.group(1)} of "
-                f"{packet_match.group(2)} marked complete"
+                f"{match.group('prefix')} {lab_complete} of {lab_total} marked complete"
             ),
             readme,
         )
@@ -465,7 +496,7 @@ def update_readme(readme: str, items: list[tuple[Path, Path]]) -> str:
             *recent_lines,
             "",
             "See [the complete activity log](ACTIVITY.md) and the "
-            "[progress dashboard index](progress/README.md).",
+            "[progress overview](progress/README.md).",
             README_END,
         ]
     )
@@ -521,15 +552,24 @@ def build_outputs(vault: Path, repo: Path) -> tuple[dict[Path, str], list[tuple[
         outputs[destination] = progress_friendly(relative_source, text)
         activity_items.append((source, destination))
 
+    progress = progress_overview(vault)
+    if progress is not None:
+        text, source = progress
+        outputs[PROGRESS_DESTINATION] = text
+        activity_items.append((source, PROGRESS_DESTINATION))
+
     if not activity_items:
         raise RuntimeError("No publishable Markdown files were found in the vault")
 
-    outputs[Path("progress/README.md")] = progress_readme()
     outputs[Path("ACTIVITY.md")] = activity_markdown(activity_items)
     readme_path = repo / "README.md"
     if not readme_path.exists():
         raise RuntimeError(f"README not found: {readme_path}")
-    outputs[Path("README.md")] = update_readme(readme_path.read_text(encoding="utf-8"), activity_items)
+    outputs[Path("README.md")] = update_readme(
+        readme_path.read_text(encoding="utf-8"),
+        activity_items,
+        manual_course_checkpoint(vault),
+    )
     scan_for_secrets(outputs)
     return outputs, activity_items
 

@@ -4,9 +4,9 @@ This repository includes separate workflows for publishing Anki progress and sel
 
 ## Nightly Anki progress sync
 
-`automation/export_anki_progress.py` reads a stable temporary snapshot of the local Anki collection and generates the public dashboard at `progress/anki.md`
+`automation/export_anki_progress.py` reads a stable temporary snapshot of the local Anki collection and refreshes the retrieval-practice momentum table in `progress/README.md`.
 
-Only aggregate statistics are exported: workload counts, review totals, study time, answer-button success rates, streaks, and deck-level weak-topic signals. Card questions, answers, note fields, and raw review history are never written to the repository. The live Anki database is opened only through a copied SQLite/WAL snapshot and is never modified.
+Only aggregate review totals, study time, and answer-button success rates are published. Workload queues, weak-topic details, card questions, answers, note fields, and raw review history remain private. The live Anki database is opened only through a copied SQLite/WAL snapshot and is never modified.
 
 The installed runtime uses a dedicated checkout under `~/Library/Application Support/CCNA Sync/`. Keeping the runner and checkout outside `Documents` prevents macOS privacy controls from blocking the background LaunchAgent.
 
@@ -28,13 +28,13 @@ The LaunchAgent runs nightly at 8:00 PM local time. macOS coalesces a missed cal
 
 ## Obsidian portfolio export
 
-The separate Obsidian generator can publish selected study notes and GitHub-friendly progress pages without changing the vault itself.
+The separate Obsidian generator can publish selected study notes and one GitHub-friendly progress overview without changing the vault itself.
 
-Vault notes under `Notes/` are published directly beneath `notes/`. The Anki, Packet Tracer, and Udemy dashboards are published beneath `progress/`, and `progress/README.md` is regenerated as their public landing page. The vault's lab status note generates the combined checklist and download index at `labs/README.md`.
+Vault notes under `Notes/` are published directly beneath `notes/`. Private Anki, Packet Tracer, and Udemy data is condensed into `progress/README.md`. The vault's lab status note still generates the combined checklist and download index at `labs/README.md`.
 
 The export removes vault-only YAML metadata from public dashboards and refreshes the repository README's current topic, Packet Tracer completion count, snapshot date, and recent-activity links.
 
-It excludes Obsidian internals, trash, local tracker state, and Packet Tracer binaries. Add this frontmatter to any Markdown note that should stay private:
+It excludes the private `00 Dashboard`, `Automation`, and `Templates` areas along with detailed progress folders, Obsidian internals, trash, local tracker state, and Packet Tracer binaries. Add this frontmatter to any other Markdown note that should stay private:
 
 ```yaml
 ---

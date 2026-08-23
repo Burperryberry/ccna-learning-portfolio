@@ -97,26 +97,21 @@ class SyncObsidianTests(unittest.TestCase):
         self.assertIn("and Static Routing.", published)
         self.assertNotIn("[Static Routing]", published)
 
-    def test_udemy_dashboard_publishes_as_progress(self):
+    def test_private_dashboard_roots_are_not_published_as_notes(self):
         self.write_note(
             "Udemy Progress/Udemy Progress Dashboard.md",
-            "---\ntags: [ccna, progress]\ncssclasses: [local-dashboard]\n---\n\n"
-            "# Udemy Progress\n\n33% complete.\n\n"
-            "Related: [[Packet Tracer Progress/Packet Tracer Dashboard"
-            "|Packet Tracer Progress]].\n\n"
-            "## How to update this dashboard\n\nLocal steps.\n",
+            "# Private Udemy detail\n",
         )
+        self.write_note("00 Dashboard/Home.md", "# Private dashboard\n")
+        self.write_note("Automation/README.md", "# Private staging\n")
+        self.write_note("Templates/Lab.md", "# Private template\n")
+        self.write_note("Notes/DNS/DNS.md", "# Public DNS note\n")
         sync_obsidian.sync(self.vault, self.repo, check=False)
-        published = self.repo / "progress/udemy.md"
-        self.assertTrue(published.exists())
-        self.assertIn("33% complete", published.read_text())
-        self.assertNotIn("Local steps", published.read_text())
-        self.assertNotIn("cssclasses", published.read_text())
-        self.assertNotIn("tags:", published.read_text())
-        self.assertIn(
-            "[Packet Tracer Progress](<packet-tracer.md>)",
-            published.read_text(),
-        )
+        self.assertFalse((self.repo / "progress/udemy.md").exists())
+        self.assertFalse((self.repo / "notes/00 Dashboard/Home.md").exists())
+        self.assertFalse((self.repo / "notes/Automation/README.md").exists())
+        self.assertFalse((self.repo / "notes/Templates/Lab.md").exists())
+        self.assertTrue((self.repo / "notes/DNS/DNS.md").exists())
 
     def test_lab_status_becomes_the_labs_readme(self):
         self.write_note(
@@ -142,54 +137,59 @@ class SyncObsidianTests(unittest.TestCase):
         self.assertIn("| Complete | **1** |", published.read_text())
         self.assertIn("| 2 | Switching | Ready |", published.read_text())
         self.assertIn("[lab reflection template](REFLECTION_TEMPLATE.md)", published.read_text())
+        self.assertIn("[CCNA progress overview](../progress/README.md)", published.read_text())
         self.assertFalse((self.repo / "progress/lab-status.md").exists())
         manifest = (self.repo / sync_obsidian.MANIFEST).read_text()
         self.assertIn('"labs/README.md"', manifest)
         self.assertNotIn('"progress/lab-status.md"', manifest)
 
-    def test_packet_dashboard_links_to_combined_lab_index(self):
+    def test_packet_dashboard_is_condensed_into_progress_overview(self):
         self.write_note(
             "Packet Tracer Progress/Packet Tracer Dashboard.md",
-            "---\ntags: [ccna, progress]\ncssclasses: [local-dashboard]\n---\n\n"
-            "Use the [[Packet Tracer Progress/Lab Status|completion checklist]].\n\n"
-            "| File |\n|---|\n"
-            "| [[Packet Tracer Progress/Labs/Day 28 Lab - OSPF (Part 3).pkt"
-            "\\|Open lab]] |\n",
+            "# Packet Tracer\n\n## Current session\n\n"
+            "| Completed | Total |\n|---:|---:|\n| 25 | 28 |\n\n"
+            "## Private inventory\n\nPrivate detail.\n",
         )
         sync_obsidian.sync(self.vault, self.repo, check=False)
-        published = (self.repo / "progress/packet-tracer.md").read_text()
-        self.assertIn("[completion checklist](<../labs/README.md>)", published)
-        self.assertIn(
-            "[Open lab](<../labs/Day 28 Lab - OSPF (Part 3).pkt>)",
-            published,
-        )
-        self.assertNotIn("cssclasses", published)
+        published = (self.repo / "progress/README.md").read_text()
+        self.assertIn("| 25 | 28 |", published)
+        self.assertNotIn("Private detail", published)
+        self.assertFalse((self.repo / "progress/packet-tracer.md").exists())
 
     def test_readme_snapshot_and_progress_index_are_generated(self):
         self.write_note(
+            "00 Dashboard/CCNA Command Center.md",
+            "# Command Center\n\n> **Day 38 — Domain Name System (DNS)**\n",
+        )
+        self.write_note(
             "Packet Tracer Progress/Packet Tracer Dashboard.md",
-            "# Packet Tracer\n\n"
+            "# Packet Tracer\n\n## Current session\n\n"
             "| Today | Total time | Completed | Started |\n"
             "|---:|---:|---:|---:|\n"
             "| 20 min | 3h | 18/20 | 6/20 |\n",
         )
         self.write_note(
-            "Udemy Progress/Udemy Progress Dashboard.md",
-            "# Udemy\n\n> **Day 28 — OSPF Part 3**\n",
+            "Packet Tracer Progress/Lab Status.md",
+            "# Labs\n\n- [x] [[Packet Tracer Progress/Labs/Day 01 Lab - Intro.pkt|Day 01 Lab - Intro]]\n"
+            "- [ ] [[Packet Tracer Progress/Labs/Day 02 Lab - DNS.pkt|Day 02 Lab - DNS]]\n",
+        )
+        self.write_note(
+            "Anki Progress/Anki Progress Dashboard.md",
+            "# Anki\n\n## Momentum\n\n| Reviews | Success |\n|---:|---:|\n| 100 | 90% |\n",
         )
 
         sync_obsidian.sync(self.vault, self.repo, check=False)
 
         readme = (self.repo / "README.md").read_text()
-        self.assertIn("- **Current topic:** Day 28 — OSPF Part 3", readme)
-        self.assertIn("- **Packet Tracer labs:** 18 of 20 marked complete", readme)
+        self.assertIn("- **Current topic:** Day 38 — Domain Name System (DNS)", readme)
+        self.assertIn("- **Packet Tracer labs:** 1 of 2 marked complete", readme)
         self.assertNotIn("January 1, 2000", readme)
-        self.assertIn("[progress dashboard index](progress/README.md)", readme)
+        self.assertIn("[progress overview](progress/README.md)", readme)
 
         progress_index = (self.repo / "progress/README.md").read_text()
-        self.assertIn("[Anki](anki.md)", progress_index)
-        self.assertIn("[Packet Tracer](packet-tracer.md)", progress_index)
-        self.assertIn("[Udemy](udemy.md)", progress_index)
+        self.assertIn("Day 38 — Domain Name System (DNS)", progress_index)
+        self.assertIn("| 100 | 90% |", progress_index)
+        self.assertFalse((self.repo / "progress/anki.md").exists())
 
     def test_publish_false_is_private(self):
         self.write_note("Private.md", "---\npublish: false\n---\n# Private\n")

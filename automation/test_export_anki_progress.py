@@ -124,6 +124,23 @@ class ExportAnkiProgressTests(unittest.TestCase):
         self.assertFalse(EXPORTER.atomic_write_if_changed(output, "dashboard\n"))
         self.assertEqual(output.read_text(encoding="utf-8"), "dashboard\n")
 
+    def test_updates_only_the_combined_progress_momentum(self) -> None:
+        overview = Path(self.temp_dir.name) / "README.md"
+        overview.write_text(
+            "Before\n"
+            f"{EXPORTER.ANKI_MOMENTUM_START}\nold\n{EXPORTER.ANKI_MOMENTUM_END}\n"
+            "After\n",
+            encoding="utf-8",
+        )
+        table = "| New |\n|---|\n| 1 |"
+        self.assertTrue(EXPORTER.update_progress_overview(overview, table))
+        text = overview.read_text(encoding="utf-8")
+        self.assertIn("Before", text)
+        self.assertIn("After", text)
+        self.assertIn("| New |", text)
+        self.assertNotIn("old", text)
+        self.assertFalse(EXPORTER.update_progress_overview(overview, table))
+
 
 if __name__ == "__main__":
     unittest.main()
