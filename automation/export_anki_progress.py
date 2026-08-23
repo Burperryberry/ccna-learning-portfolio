@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Export aggregate Anki study progress without publishing card contents."""
+"""Refresh aggregate Anki momentum in the combined public progress overview."""
 
 from __future__ import annotations
 
 import argparse
 import datetime as dt
 import os
+import re
 import shutil
 import sqlite3
 import tempfile
@@ -20,7 +21,9 @@ DEFAULT_COLLECTION = (
     Path.home() / "Library" / "Application Support" / "Anki2" / "User 1" / "collection.anki2"
 )
 DEFAULT_HISTORY_DAYS = 365
-OUTPUT_PATHS = (Path("progress") / "anki.md",)
+PROGRESS_OVERVIEW = Path("progress") / "README.md"
+ANKI_MOMENTUM_START = "<!-- ANKI_MOMENTUM:START -->"
+ANKI_MOMENTUM_END = "<!-- ANKI_MOMENTUM:END -->"
 
 
 def _source_signature(collection: Path) -> tuple[tuple[str, int, int], ...]:
@@ -348,6 +351,33 @@ def atomic_write_if_changed(path: Path, content: str) -> bool:
     return True
 
 
+def momentum_section(dashboard: str) -> str:
+    body = dashboard.split("\n## Momentum\n", 1)[1].split("\n## ", 1)[0].strip()
+    rows = []
+    for line in body.splitlines():
+        if line.startswith("|"):
+            rows.append(line)
+        elif rows:
+            break
+    if len(rows) < 3:
+        raise RuntimeError("Rendered Anki Momentum table is incomplete")
+    return "\n".join(rows)
+
+
+def update_progress_overview(path: Path, momentum: str) -> bool:
+    if not path.exists():
+        raise RuntimeError(f"Combined progress overview not found: {path}")
+    content = path.read_text(encoding="utf-8")
+    if ANKI_MOMENTUM_START not in content or ANKI_MOMENTUM_END not in content:
+        raise RuntimeError("Combined progress overview has no Anki momentum markers")
+    block = f"{ANKI_MOMENTUM_START}\n{momentum}\n{ANKI_MOMENTUM_END}"
+    pattern = re.compile(
+        re.escape(ANKI_MOMENTUM_START) + r".*?" + re.escape(ANKI_MOMENTUM_END),
+        re.DOTALL,
+    )
+    return atomic_write_if_changed(path, pattern.sub(block, content))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--collection", type=Path, default=DEFAULT_COLLECTION)
@@ -363,16 +393,12 @@ def main() -> int:
             decks, counts, reviews = load_dashboard_data(
                 connection, now, max(30, args.history_days)
             )
-        content = render_dashboard(decks, counts, reviews, now)
-        changed = []
-        for relative_path in OUTPUT_PATHS:
-            destination = args.repo.expanduser().resolve() / relative_path
-            if atomic_write_if_changed(destination, content):
-                changed.append(str(relative_path))
-        if changed:
-            print(f"Updated {', '.join(changed)}")
+        dashboard = render_dashboard(decks, counts, reviews, now)
+        destination = args.repo.expanduser().resolve() / PROGRESS_OVERVIEW
+        if update_progress_overview(destination, momentum_section(dashboard)):
+            print(f"Updated {PROGRESS_OVERVIEW}")
         else:
-            print("No Anki dashboard changes found.")
+            print("No Anki momentum changes found.")
         return 0
     except (OSError, RuntimeError, sqlite3.Error, ValueError) as exc:
         print(f"Anki export failed: {exc}", file=os.sys.stderr)

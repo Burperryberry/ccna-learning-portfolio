@@ -4,34 +4,33 @@ This page summarizes publishable study artifacts and progress from the CCNA Obsi
 
 ## Current portfolio snapshot
 
-- **Published notes:** 23
-- **Current topic:** Day 36 · CDP & LLDP
-- **Packet Tracer:** 25/26 labs complete
-- **Udemy:** 73 of 129 videos complete (56.6%)
-- **Anki:** 965 cards tracked
+- **Published notes:** 30
 
 ## Quick links
 
 - [Browse all study notes](notes/README.md)
 - [Download Packet Tracer labs](labs/README.md)
-- [Packet Tracer progress](progress/packet-tracer.md)
-- [Anki progress](progress/anki.md)
-- [Udemy progress](progress/udemy.md)
+- [CCNA progress overview](progress/README.md)
 
 ## Latest learning
 
-- [Standard Access Control Lists (ACLs)](notes/ACL/Standard%20Access%20Control%20Lists%20%28ACLs%29.md)
-- [Extended Access Control Lists (ACLs)](notes/ACL/Extended%20Access%20Control%20Lists%20%28ACLs%29.md)
-- [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md)
+- [CCNA 200-301 v1.1 Coverage](notes/Blueprint/CCNA%20200-301%20v1.1%20Coverage.md)
+- [Domain Name System (DNS)](notes/DNS/Domain%20Name%20System%20%28DNS%29.md)
+- [CCNA Capture Workflow](notes/Wireshark/CCNA%20Capture%20Workflow.md)
 
 ## Published activity
 
 | Last updated | Area | Artifact |
 |---|---|---|
-| 2026-08-17 11:52 EDT | Udemy Progress | [Udemy Progress Dashboard](progress/udemy.md) |
-| 2026-08-17 11:52 EDT | Packet Tracer Progress | [Packet Tracer Dashboard](progress/packet-tracer.md) |
-| 2026-08-17 11:52 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
-| 2026-08-17 11:45 EDT | Anki Progress | [Anki Progress Dashboard](progress/anki.md) |
+| 2026-08-23 15:29 EDT | Packet Tracer Progress | [CCNA Progress Overview](progress/README.md) |
+| 2026-08-23 15:29 EDT | Packet Tracer Labs | [Packet Tracer Labs](labs/README.md) |
+| 2026-08-23 14:55 EDT | Blueprint | [CCNA 200-301 v1.1 Coverage](notes/Blueprint/CCNA%20200-301%20v1.1%20Coverage.md) |
+| 2026-08-23 14:55 EDT | DNS | [Domain Name System (DNS)](notes/DNS/Domain%20Name%20System%20%28DNS%29.md) |
+| 2026-08-23 14:51 EDT | Wireshark | [CCNA Capture Workflow](notes/Wireshark/CCNA%20Capture%20Workflow.md) |
+| 2026-08-20 08:08 EDT | NTP | [Network Time Protocol (NTP)](notes/NTP/Network%20Time%20Protocol%20%28NTP%29.md) |
+| 2026-08-19 08:48 EDT | Ethernet LAN Switching | [Day 06 - Ethernet LAN Switching (Part 2)](notes/Ethernet%20LAN%20Switching/Day%2006%20-%20Ethernet%20LAN%20Switching%20%28Part%202%29.md) |
+| 2026-08-18 11:22 EDT | CDP & LLDP | [CDP & LLDP](notes/CDP%20%26%20LLDP/CDP%20%26%20LLDP.md) |
+| 2026-08-17 19:06 EDT | Ethernet LAN Switching | [Day 05 - Ethernet LAN Switching (Part 1)](notes/Ethernet%20LAN%20Switching/Day%2005%20-%20Ethernet%20LAN%20Switching%20%28Part%201%29.md) |
 | 2026-08-17 10:35 EDT | ACL | [Standard Access Control Lists (ACLs)](notes/ACL/Standard%20Access%20Control%20Lists%20%28ACLs%29.md) |
 | 2026-08-17 10:35 EDT | ACL | [Extended Access Control Lists (ACLs)](notes/ACL/Extended%20Access%20Control%20Lists%20%28ACLs%29.md) |
 | 2026-08-03 18:15 EDT | IPv6 | [IPv6 Part 1 - Addressing, Prefixes, and Configuration](notes/IPv6/IPv6%20Part%201%20-%20Addressing%2C%20Prefixes%2C%20and%20Configuration.md) |

@@ -1,13 +1,35 @@
-# CCNA Progress Dashboards
+# CCNA Progress Overview
 
-This folder contains the public progress snapshots generated from the CCNA study system.
+A concise, automatically generated view of current coursework, practical labs, and retrieval practice.
 
-| Dashboard | What it tracks |
-|---|---|
-| [Anki](anki.md) | Card workload, reviews, study time, and weak-topic signals |
-| [Packet Tracer](packet-tracer.md) | Lab completion, tracked practice time, and recent activity |
-| [Udemy](udemy.md) | Course position, completed videos, and section progress |
+## Current course checkpoint
 
-The [Packet Tracer lab index](../labs/README.md) is the single checklist and download page for lab files.
+**Day 38 — Domain Name System (DNS)**
 
-These pages are generated from local dashboards. Their “Last synchronized” timestamps show when each source was most recently published.
+## Practical lab progress
+
+| Today | Total time | Completed | Started |
+|---:|---:|---:|---:|
+| 0 min | 4h 55m | 28/28 | 9/28 |
+
+### Remaining labs
+
+- No labs are currently marked incomplete.
+
+## Retrieval-practice momentum
+
+<!-- ANKI_MOMENTUM:START -->
+| Metric | Last 7 days | Last 30 days |
+|---|---:|---:|
+| Reviews | **129** | **1183** |
+| Study time | **14 min** | **195 min** |
+| Success rate | **93.8%** | **87.8%** |
+| Again presses | 8 | 144 |
+<!-- ANKI_MOMENTUM:END -->
+
+## Evidence
+
+- Browse the [technical notes](../notes/) for protocol explanations and troubleshooting references.
+- Browse the [Packet Tracer labs](../labs/) for hands-on configuration artifacts.
+
+Detailed local dashboards, study queues, and automation instructions remain private to keep this portfolio focused.
