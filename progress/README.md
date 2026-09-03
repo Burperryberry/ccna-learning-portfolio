@@ -21,10 +21,10 @@ A concise, automatically generated view of current coursework, practical labs, a
 <!-- ANKI_MOMENTUM:START -->
 | Metric | Last 7 days | Last 30 days |
 |---|---:|---:|
-| Reviews | **207** | **752** |
-| Study time | **33 min** | **106 min** |
-| Success rate | **94.2%** | **92.4%** |
-| Again presses | 12 | 57 |
+| Reviews | **136** | **578** |
+| Study time | **24 min** | **87 min** |
+| Success rate | **94.1%** | **92.4%** |
+| Again presses | 8 | 44 |
 <!-- ANKI_MOMENTUM:END -->
 
 ## Evidence
